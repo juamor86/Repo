@@ -1,0 +1,41 @@
+{
+    "total": "3",
+    "type": [
+        "contenido"
+    ],
+    "entry": [
+        {
+            "id": "153 at http://portalcomunicacionmsalud.sas.junta-andalucia.es/servicioandaluzdesalud/portalcomunicacionmsalud",
+            "type": "contenido",
+            "title": "Información sobre el número de casos de coronavirus.",
+            "alt": "<p>La Consejería de Salud y Familias informa de que, actualmente, 2.187 pacientes confirmados con COVID-19 permanecen ingresados en los hospitales andaluces, de los que 228 se encuentran en UCI</p>",
+            "imgHeader": "https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/msspa_gateway_pre/servicioandaluzdesalud/portalcomunicacionmsalud/sites/default/files/News/img/Coronavirus_206.jpg",
+            "size": "",
+            "resolution": "1029x357",
+            "operationMode": "webview",
+            "linkMode": "https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/todas-noticia/informacion-sobre-el-numero-de-casos-de-coronavirus-636"
+        },
+        {
+            "id": "152 at http://portalcomunicacionmsalud.sas.junta-andalucia.es/servicioandaluzdesalud/portalcomunicacionmsalud",
+            "type": "contenido",
+            "title": "Investigadores andaluces estudian cómo obtener células sanas de la retina para revertir patologías degenerativas",
+            "alt": "<p>Científicos de la Fundación Progreso y Salud recurrirán a la edición genética para eliminar el “fallo genético” de las células implicadas en determinadas enfermedades del ojo.</p>",
+            "imgHeader": "https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/msspa_gateway_pre/servicioandaluzdesalud/portalcomunicacionmsalud/sites/default/files/News/img/Investigadores.jpg",
+            "size": "",
+            "resolution": "1029x357",
+            "operationMode": "webview",
+            "linkMode": "https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/todas-noticia/investigadores-andaluces-estudian-como-obtener-celulas-sanas-de-la-retina-para-revertir-patologias"
+        },
+        {
+            "id": "151 at http://portalcomunicacionmsalud.sas.junta-andalucia.es/servicioandaluzdesalud/portalcomunicacionmsalud",
+            "type": "contenido",
+            "title": "Andalucía abre agenda de forma progresiva la próxima semana para dosis de refuerzo covid para los mayores de 18 años",
+            "alt": "<p>La petición de cita podrá realizarse a través de ClicSalud+, la aplicación y el teléfono de Salud Responde o acudir a los puntos sin cita</p>",
+            "imgHeader": "",
+            "size": "",
+            "resolution": "",
+            "operationMode": "webview",
+            "linkMode": "https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/todas-noticia/andalucia-abre-agenda-de-forma-progresiva-la-proxima-semana-para-dosis-de-refuerzo-covid-para-los"
+        }
+    ]
+}

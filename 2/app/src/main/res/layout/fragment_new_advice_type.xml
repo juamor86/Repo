@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="es.juntadeandalucia.msspa.saludandalucia.presentation.advices.types.NewAdviceTypeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="es.juntadeandalucia.msspa.saludandalucia.presentation.advices.types.NewAdviceTypeFragment">
+
+        <TextView
+            android:id="@+id/new_advice_title_tv"
+            style="@style/NewAdviceTypeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default_triple"
+            android:layout_marginStart="@dimen/avisas_button_margin_start"
+            android:layout_marginEnd="@dimen/avisas_button_margin_start"
+            android:text="@string/avisas_list_advice_new_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/new_advice_subtitle_tv"/>
+
+        <TextView
+            android:id="@+id/new_advice_subtitle_tv"
+            style="@style/NewAdviceTypeSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/new_advice_subtitle_margin_top"
+            android:layout_marginStart="@dimen/avisas_button_margin_start"
+            android:layout_marginEnd="@dimen/avisas_button_margin_start"
+            android:text="@string/new_advice_type_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_advice_title_tv"
+            app:layout_constraintBottom_toTopOf="@+id/advice_type_rv"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/advice_type_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/new_advice_type_recycler_margin_top"
+            android:layout_marginBottom="@dimen/margin_default_double"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_advice_subtitle_tv"
+            tools:listitem="@layout/view_item_advice_type"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

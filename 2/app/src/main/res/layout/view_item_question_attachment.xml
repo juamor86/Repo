@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_default_double"
+    android:layout_marginRight="@dimen/margin_default_double"
+    android:layout_marginLeft="@dimen/margin_default_double"
+    android:addStatesFromChildren="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:stateListAnimator="@anim/card_elevation_anim"
+    app:cardCornerRadius="@dimen/card_default_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:addStatesFromChildren="true">
+
+        <include layout="@layout/view_item_question" />
+
+        <LinearLayout
+            android:id="@+id/add_image_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default_double"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_default_double"
+            android:layout_marginBottom="@dimen/default_huge_margin"
+            android:background="@drawable/bg_button_upload_file"
+            android:gravity="center"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_tv">
+
+            <TextView
+                style="@style/TitleText.Question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="Adjuntar imagen" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_picture_file" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/icon_picture_iv"
+            android:layout_width="@dimen/dynamic_quest_new_icon"
+            android:layout_height="@dimen/dynamic_quest_new_icon"
+            android:layout_marginStart="@dimen/margin_default_double"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginBottom="@dimen/default_huge_margin"
+            android:src="@drawable/ic_picture_file"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_tv" />
+
+        <TextView
+            android:id="@+id/file_description_tv"
+            style="@style/TitleText.Question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_default_half"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_picture_iv"
+            app:layout_constraintEnd_toStartOf="@+id/delete_iv"
+            app:layout_constraintStart_toEndOf="@+id/icon_picture_iv"
+            app:layout_constraintTop_toTopOf="@+id/icon_picture_iv" />
+
+        <ImageView
+            android:id="@+id/delete_iv"
+            android:visibility="gone"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="@dimen/margin_default_double"
+            android:src="@drawable/ic_cross"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_picture_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/icon_picture_iv" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/file_response_gp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="file_description_tv,icon_picture_iv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+
+        android:id="@+id/view_ns"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/whiteTwo"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPanel_cl">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/new_advice_title_tv"
+                style="@style/NewAdviceTypeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/avisas_button_margin_start"
+                android:layout_marginTop="@dimen/margin_default_triple"
+                android:layout_marginEnd="@dimen/avisas_button_margin_start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Tipo aviso 1" />
+
+            <TextView
+                android:id="@+id/new_advice_subtitle_tv"
+                style="@style/AvisasSubtitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/avisas_button_margin_start"
+                android:layout_marginTop="@dimen/new_advice_subtitle_margin_top"
+                android:layout_marginEnd="@dimen/avisas_button_margin_start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_advice_title_tv"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet sem vel orci sodales, at rutrum mi commodo." />
+
+            <!-- SENDED BY-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sended_by_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/avisas_subtitle_margin_top"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/new_advice_margin_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_advice_subtitle_tv">
+
+                <TextView
+                    android:id="@+id/request_sent_by_tv"
+                    style="@style/AvisasSubtitleBig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/avisas_button_margin_start"
+                    android:layout_marginTop="@dimen/margin_default_triple"
+                    android:layout_marginEnd="@dimen/avisas_button_margin_start"
+                    android:text="@string/new_advice_request_sent_by"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/request_sent_by_iv"
+                    android:layout_width="@dimen/margin_default_huge"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginStart="@dimen/avisas_button_margin_start"
+                    android:layout_marginTop="@dimen/margin_default_triple"
+                    android:src="@drawable/ic_user"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/request_sent_by_tv" />
+
+                <TextView
+                    android:id="@+id/request_sent_user_tv"
+                    style="@style/AvisasSubtitleBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginStart="@dimen/new_advice_type_subtitle_margin_top"
+                    android:gravity="center_vertical"
+                    app:layout_constraintStart_toEndOf="@+id/request_sent_by_iv"
+                    app:layout_constraintTop_toTopOf="@+id/request_sent_by_iv"
+                    tools:text="Contacto 1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- HOW TO RECEIVE SWITCHES-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/how_to_receive_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/avisas_subtitle_margin_top"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/new_advice_margin_bottom"
+                app:layout_constraintBottom_toTopOf="@id/contacts_receive_cl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sended_by_cl"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/how_to_receive_tv"
+                    style="@style/AvisasSubtitleBig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/avisas_button_margin_start"
+                    android:layout_marginTop="@dimen/card_default_radius"
+                    android:layout_marginEnd="@dimen/avisas_button_margin_start"
+                    android:text="@string/new_advice_how_to_receive_advice"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/bell_iv"
+                    android:layout_width="@dimen/margin_default_huge"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginStart="@dimen/avisas_button_margin_start"
+                    android:layout_marginTop="@dimen/margin_default_triple"
+                    android:src="@drawable/ic_bell"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/how_to_receive_tv" />
+
+                <TextView
+                    android:id="@+id/in_my_app_tv"
+                    style="@style/TitleText.Notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginStart="@dimen/new_advice_tinny_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/new_advice_how_to_receive_in_app"
+                    app:layout_constraintStart_toEndOf="@+id/bell_iv"
+                    app:layout_constraintTop_toTopOf="@+id/bell_iv" />
+
+                <Switch
+                    android:id="@+id/in_my_app_sw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginEnd="@dimen/avisas_button_margin_start"
+                    android:checked="true"
+                    app:layout_constraintBottom_toBottomOf="@id/in_my_app_tv"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/mail_iv"
+                    android:layout_width="@dimen/margin_default_huge"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginStart="@dimen/avisas_button_margin_start"
+                    android:layout_marginTop="@dimen/margin_default_double"
+                    android:src="@drawable/ic_iconsavisas"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bell_iv" />
+
+                <TextView
+                    android:id="@+id/by_mail_tv"
+                    style="@style/TitleText.Notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginStart="@dimen/new_advice_tinny_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/new_advice_how_to_receive_by_email"
+                    app:layout_constraintStart_toEndOf="@+id/mail_iv"
+                    app:layout_constraintTop_toTopOf="@+id/mail_iv" />
+
+                <Switch
+                    android:id="@+id/by_mail_sw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginEnd="@dimen/avisas_button_margin_start"
+                    android:checked="false"
+                    app:layout_constraintBottom_toBottomOf="@id/by_mail_tv"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/advice_email_it"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_section_default"
+                    android:hint="@string/new_advice_enter_your_mail"
+                    android:visibility="gone"
+                    app:hintTextColor="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/mail_iv"
+                    app:layout_constraintTop_toBottomOf="@+id/by_mail_tv">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/advice_email_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/sms_iv"
+                    android:layout_width="@dimen/margin_default_huge"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginStart="@dimen/avisas_button_margin_start"
+                    android:layout_marginTop="@dimen/margin_default_double"
+                    android:src="@drawable/ic_iconssms"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/advice_email_it" />
+
+                <TextView
+                    android:id="@+id/by_sms_tv"
+                    style="@style/TitleText.Notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginStart="@dimen/new_advice_tinny_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/new_advice_how_to_receive_by_sms"
+                    app:layout_constraintStart_toEndOf="@+id/sms_iv"
+                    app:layout_constraintTop_toTopOf="@+id/sms_iv" />
+
+                <Switch
+                    android:id="@+id/by_sms_sw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_default_huge"
+                    android:layout_marginEnd="@dimen/avisas_button_margin_start"
+                    android:checked="false"
+                    app:layout_constraintBottom_toBottomOf="@id/by_sms_tv"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- CONTACTS EMPTY-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contacts_receive_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_default_radius"
+                android:layout_marginBottom="@dimen/item_tab_selector_height"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/how_to_receive_cl">
+
+                <TextView
+                    android:id="@+id/other_persons_recive_tv"
+                    style="@style/AvisasSubtitleBig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/avisas_button_margin_start"
+                    android:layout_marginTop="@dimen/card_default_radius"
+                    android:layout_marginEnd="@dimen/avisas_button_margin_start"
+                    android:text="@string/new_advice_want_other_persons_receive"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/can_share_with_others_tv"
+                    style="@style/NewAdviceTypeSubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/avisas_button_margin_start"
+                    android:layout_marginTop="@dimen/new_advice_type_subtitle_margin_top"
+                    android:layout_marginEnd="@dimen/avisas_button_margin_start"
+                    android:text="@string/new_advice_can_share_this_advice"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/other_persons_recive_tv" />
+
+                <!-- ADVICE CREATED LIST-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/contacts_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_default_triple"
+                    android:layout_marginBottom="@dimen/margin_default_triple"
+                    android:scrollbars="none"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/can_share_with_others_tv"
+                    tools:listitem="@layout/view_item_advice_type" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/new_advice_share_bt"
+                    style="@style/AvisasShareButton"
+                    android:layout_width="@dimen/new_advice_share_button_width"
+                    android:layout_height="@dimen/new_advice_share_button_height"
+                    android:layout_marginStart="@dimen/margin_default_triple"
+                    android:layout_marginTop="@dimen/margin_default_triple"
+                    android:layout_marginEnd="@dimen/margin_default_triple"
+                    android:layout_marginBottom="@dimen/avisas_button_margin_bottom"
+                    android:drawableStart="@drawable/ic_iconsshare"
+                    android:paddingStart="@dimen/margin_default_double"
+                    android:text="@string/share"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/contacts_rv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+    android:id="@+id/buttonPanel_cl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginStart="@dimen/avisas_button_margin_start"
+    android:layout_marginEnd="@dimen/avisas_button_margin_start"
+    android:layout_marginBottom="@dimen/avisas_button_margin_bottom"
+    app:layout_constraintTop_toBottomOf="@id/view_ns"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

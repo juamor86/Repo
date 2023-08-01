@@ -1,0 +1,197 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:filterTouchesWhenObscured="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/not_available_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_header_margin"
+            android:src="@drawable/ic_time"
+            app:layout_constraintBottom_toTopOf="@id/not_available_header_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/not_available_header_tv"
+            style="@style/TitleText.Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/default_header_margin"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            android:text="@string/quiz_not_available_header"
+            app:layout_constraintBottom_toTopOf="@id/not_available_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/not_available_iv" />
+
+        <TextView
+            android:id="@+id/not_available_tv"
+            style="@style/DisclaimerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/not_available_header_tv"
+            tools:text="Debe pasar a menos 12 horas desde la última vez que realizó un cuestionario.\nPodrá realizarlo de nuevo a partir de las 12:00" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/accept_btn"
+            style="@style/PrimaryButton"
+            android:layout_width="@dimen/button_width_default"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            android:layout_marginBottom="@dimen/margin_default_double"
+            android:text="@string/accept"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/not_available_tv"
+            app:layout_constraintVertical_bias="1" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/not_available_gp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="not_available_iv, not_available_header_tv, not_available_tv, accept_btn"
+            tools:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/empty_header_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_header_margin"
+            android:src="@drawable/ic_alert"
+            app:layout_constraintBottom_toTopOf="@+id/empty_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/empty_tv"
+            style="@style/DisclaimerText.Empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/default_huge_margin"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            android:autoLink="web|phone|email"
+            android:text="@string/quiz_error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/empty_header_iv" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/empty_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="empty_header_iv, empty_tv"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/questionnaire_header_tv"
+            style="@style/TitleText.Section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_huge_margin"
+            android:layout_marginBottom="@dimen/margin_default_double"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toTopOf="@id/questionnaire_subtitle_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Titulo Cuestionario"/>
+
+        <TextView
+            android:id="@+id/questionnaire_subtitle_tv"
+            style="@style/SubtitleText.Light.Italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_huge_margin"
+            android:layout_marginStart="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_default_double"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toTopOf="@id/questions_rv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questionnaire_header_tv"
+            tools:text="Subtítulo CuestionarioSubtítulo CuestionarioSubtítulo CuestionarioSubtítulo CuestionarioSubtítulo Cuestionario"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/questions_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/disclaimer_tv"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questionnaire_header_tv"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:itemCount="3"
+            tools:listitem="@layout/view_item_question_boolean" />
+
+        <TextView
+            android:id="@+id/disclaimer_tv"
+            style="@style/DisclaimerText.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default_double"
+            android:layout_marginTop="@dimen/default_huge_margin"
+            android:layout_marginEnd="@dimen/margin_default_double"
+            android:layout_marginBottom="@dimen/default_huge_margin"
+            android:text="@string/quiz_disclaimer"
+            app:layout_constraintBottom_toTopOf="@id/send_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questions_rv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/send_btn"
+            style="@style/PrimaryButton"
+            android:layout_width="@dimen/button_width_default"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            android:layout_marginBottom="@dimen/margin_default_double"
+            android:enabled="false"
+            android:text="@string/send_quiz"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/disclaimer_tv" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/questions_gp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="questionnaire_header_tv, questions_rv, disclaimer_tv, send_btn"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

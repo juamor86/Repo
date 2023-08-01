@@ -1,0 +1,80 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:filterTouchesWhenObscured="true"
+    tools:context="es.juntadeandalucia.msspa.saludandalucia.presentation.apps.details.AppDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/app_detail_layout_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/app_detail_icon_iv"
+            android:layout_width="@dimen/app_details_icon_app_size"
+            android:layout_height="@dimen/app_details_icon_app_size"
+            android:layout_marginStart="@dimen/default_separator"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:contentDescription="@string/app_details_icon_description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/app_detail_name_tv"
+            style="@style/TitleText.Section.Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_separator"
+            android:layout_marginEnd="@dimen/default_separator"
+            app:layout_constraintLeft_toRightOf="@id/app_detail_icon_iv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/app_detail_icon_iv"
+            tools:text="Salud Responde" />
+
+        <TextView
+            android:id="@+id/app_detail_category_tv"
+            style="@style/SubtitleText.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_separator"
+            android:layout_marginEnd="@dimen/default_separator"
+            app:layout_constraintLeft_toRightOf="@id/app_detail_icon_iv"
+            app:layout_constraintTop_toBottomOf="@id/app_detail_name_tv"
+            tools:text="Medicina" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/app_detail_download_btn"
+            style="@style/DownloadButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_separator"
+            android:layout_marginEnd="@dimen/default_separator"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/app_detail_icon_iv"
+            app:layout_constraintLeft_toRightOf="@id/app_detail_icon_iv"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="Descargar" />
+
+        <TextView
+            android:id="@+id/app_detail_description_tv"
+            style="@style/SubtitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_separator"
+            android:layout_marginTop="@dimen/margin_section_default"
+            android:layout_marginEnd="@dimen/default_separator"
+            android:layout_marginBottom="@dimen/margin_default_double"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_detail_icon_iv"
+            tools:text="@string/lorem_ipsum"
+            android:autoLink="web|email"/>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

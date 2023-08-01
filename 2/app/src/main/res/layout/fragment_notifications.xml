@@ -1,0 +1,139 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notifications_sw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:filterTouchesWhenObscured="true"
+    tools:context=".presentation.notifications.NotificationsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/notifications_sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/margin_default_quadruple">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notifications_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/notifications_section_title_tv"
+                style="@style/TitleText.Section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_default_double"
+                android:layout_marginTop="@dimen/margin_default_double"
+                android:layout_marginRight="@dimen/margin_default_double"
+                android:text="@string/notifications_section_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/notifications_off_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_default_triple"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_default_triple"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:background="@drawable/sh_rounded_rect_yellow"
+                android:padding="@dimen/margin_default"
+                android:text="@string/warning_notification_preferences"
+                android:textColor="@color/yellow_warning"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/barrier"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notifications_section_title_tv" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="notifications_off_tv, notifications_section_title_tv" />
+
+            <TextView
+                android:id="@+id/notifications_unread_tv"
+                style="@style/SubtitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_default_double"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginRight="@dimen/margin_default_double"
+                android:text="@string/notifications_unread"
+                app:layout_constraintBottom_toTopOf="@id/notifications_rv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier"
+                tools:text="Tiene 1 notificación pendiente de leer" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/notifications_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_default_triple"
+                android:layout_marginBottom="@dimen/margin_default_double"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notifications_unread_tv"
+                tools:listitem="@layout/view_item_notification"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/empty_header_iv"
+                android:layout_width="@dimen/info_icon_size"
+                android:layout_height="@dimen/info_icon_size"
+                android:layout_marginTop="@dimen/default_header_margin"
+                android:src="@drawable/ic_alert_info"
+                app:layout_constraintBottom_toTopOf="@+id/empty_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notifications_section_title_tv"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/empty_tv"
+                style="@style/DisclaimerText.Empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default_huge"
+                android:layout_marginTop="@dimen/margin_default_huge"
+                android:layout_marginEnd="@dimen/margin_default_huge"
+                android:autoLink="web|phone|email"
+                android:text="@string/notifications_empty"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/empty_header_iv"
+                tools:visibility="gone" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/empty_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:constraint_referenced_ids="empty_header_iv,empty_tv"
+                tools:visibility="gone" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/notifications_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="notifications_unread_tv, notifications_rv" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

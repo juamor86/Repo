@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/TitleText.Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/on_boarding_default_margin"
+            android:layout_marginEnd="@dimen/on_boarding_default_margin"
+            android:layout_marginTop="@dimen/margin_default_huge"
+            android:gravity="center"
+            android:text="@string/validate_error_covid_cert_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/result_img"
+            android:layout_width="@dimen/validate_cert_img_width"
+            android:layout_height="@dimen/validate_cert_img_height"
+            android:layout_marginTop="@dimen/margin_default_huge"
+            android:adjustViewBounds="true"
+            android:background="@drawable/bg_invalid"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+        <TextView
+            android:id="@+id/disclaimer_tv"
+            style="@style/DisclaimerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default_huge"
+            android:layout_marginTop="@dimen/margin_default_large"
+            android:layout_marginEnd="@dimen/margin_default_huge"
+            android:text="@string/validate_covid_cert_invalid_disclaimer_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/result_img"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/expired_tv"
+            style="@style/DisclaimerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default_huge"
+            android:layout_marginTop="@dimen/margin_default_large"
+            android:layout_marginEnd="@dimen/margin_default_huge"
+            android:text="@string/validate_covid_cert_invalid_expired"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/disclaimer_tv"
+            app:layout_constraintVertical_bias="0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

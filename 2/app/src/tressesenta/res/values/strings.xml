@@ -1,0 +1,9 @@
+<resources>
+    <string name="fab_luncher" translatable="false">SAS 360</string>
+    <string name="splash_text">Esta es la App del SSPA para la comunidad de sanitarios y no sanitarios de Andalucía</string>
+    <string name="splash_title">Bienvenido</string>
+    <string name="legal_text">En cumplimiento de lo dispuesto en el Reglamento (UE)2016/679 General de Protección de Datos y demás normativa conexa, el Servicio Andaluz de Salud (SAS), como responsable del tratamiento, le informa que los datos obtenidos a través de esta aplicación, en adelante SAS360, serán tratados con la finalidad de facilitar el acceso a los servicios de movilidad destinados a los profesionales del SAS (apps profesionales, suscripciones, noticias e información, etc).\n\n
+    Sus datos serán respaldados en servidores propios o bajo nuestro control, pudiendo ser tratados por prestadores de servicios en calidad de encargados del tratamiento, no previéndose comunicaciones de datos a terceros salvo las legalmente establecidas. Podrá ejercer sus derechos de acceso, rectificación, oposición, supresión o cualquier otro reconocido, a través de la misma aplicación o como se indica en la información ampliada (https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/politica-de-privacidad).\n\n
+    Puede consultar cualquier cuestión relacionada con la protección de sus datos personales a través de la dirección de correo dpd.sspa@juntadeandalucia.es.
+</string>
+</resources>

@@ -1,0 +1,10 @@
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="true">clicsalud2.pre.sas.junta-andalucia.es</domain>
+        <trust-anchors>
+            <!-- Only trust the CAs included with the app
+                 for connections to clicsalud2.pre.sas.junta-andalucia.es -->
+            <certificates src="@raw/cs_certificate" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

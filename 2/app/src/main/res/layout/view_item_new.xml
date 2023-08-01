@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_default_double"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/corner_radius_default">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/new_texts_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/new_header_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_image_height"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@id/new_texts_ly"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/new_title_tv"
+                style="@style/TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/card_margin_default"
+                android:layout_marginTop="@dimen/margin_default_double"
+                android:layout_marginRight="@dimen/card_margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:ellipsize="end"
+                android:maxLines="4"
+                tools:text="Titulo prueba" />
+
+            <TextView
+                android:id="@+id/new_description_tv"
+                style="@style/SubtitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/card_margin_default"
+                android:layout_marginRight="@dimen/card_margin_default"
+                android:layout_marginBottom="@dimen/card_margin_default"
+                android:ellipsize="end"
+                android:maxLines="3"
+                tools:text="@string/lorem_ipsum" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

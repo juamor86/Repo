@@ -1,0 +1,108 @@
+{
+  "id":"213456789",
+  "resourceType":"Bundle",
+  "meta":{
+    "lastUpdated":"2015-02-07T13:28:17.239+02:00"
+  },
+  "type":"searchset",
+  "total":3,
+  "link":[
+    {
+      "relation":"self",
+      "url":""
+    }
+  ],
+  "entry":[
+    {
+      "resource":{
+        "id":"12323ruongferbgt",
+        "resourceType":"Subscription",
+        "text":"Ingreso de paciente",
+        "status":"active",
+        "reason":"Notificación a la hora de realizarse un ingreso del paciente",
+        "criteria":"Communication?subject.id=[nuhsa]&topic.code=ingresoPac",
+        "channel":{
+          "type":"message"
+        }
+      }
+    },
+    {
+      "resource":{
+        "id":"12323ruongferbgt",
+        "resourceType":"Subscription",
+        "text":"Tipo aviso 2",
+        "status":"off",
+        "reason":"Notificación a la hora de realizarse un ingreso del paciente",
+        "criteria":"Communication?subject.id=[nuhsa]&topic.code=ingresoPac",
+        "channel":{
+          "type":"message"
+        }
+      }
+    },
+    {
+      "resource":{
+        "id":"12323ruongferbgt",
+        "resourceType":"Subscription",
+        "text":"Tipo aviso 3",
+        "status":"off",
+        "reason":"Notificación a la hora de realizarse un ingreso del paciente",
+        "criteria":"Communication?subject.id=[nuhsa]&topic.code=ingresoPac",
+        "channel":{
+          "type":"message"
+        }
+      }
+    },
+    {
+      "resource":{
+        "id":"12323ruongferbgt",
+        "resourceType":"Subscription",
+        "text":"Tipo aviso 4",
+        "status":"off",
+        "reason":"Notificación a la hora de realizarse un ingreso del paciente",
+        "criteria":"Communication?subject.id=[nuhsa]&topic.code=ingresoPac",
+        "channel":{
+          "type":"message"
+        }
+      }
+    },
+    {
+      "resource":{
+        "id":"12323ruongferbgt",
+        "resourceType":"Subscription",
+        "text":"Tipo aviso 5",
+        "status":"off",
+        "reason":"Notificación a la hora de realizarse un ingreso del paciente",
+        "criteria":"Communication?subject.id=[nuhsa]&topic.code=ingresoPac",
+        "channel":{
+          "type":"message"
+        }
+      }
+    },
+    {
+      "resource":{
+        "id":"12323ruongferbgt",
+        "resourceType":"Subscription",
+        "text":"Tipo aviso 6",
+        "status":"off",
+        "reason":"Notificación a la hora de realizarse un ingreso del paciente",
+        "criteria":"Communication?subject.id=[nuhsa]&topic.code=ingresoPac",
+        "channel":{
+          "type":"message"
+        }
+      }
+    },
+    {
+      "resource":{
+        "id":"12323ruongferbgt",
+        "resourceType":"Subscription",
+        "text":"Tipo aviso 7",
+        "status":"off",
+        "reason":"Notificación a la hora de realizarse un ingreso del paciente",
+        "criteria":"Communication?subject.id=[nuhsa]&topic.code=ingresoPac",
+        "channel":{
+          "type":"message"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:filterTouchesWhenObscured="true"
+tools:context=".presentation.legal.LegalFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/permission_title"
+        style="@style/TitleText.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default_double"
+        android:gravity="center"
+        tools:text="@string/permission_dialog_tittle"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/permission_description"
+        style="@style/Measure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default_quadruple"
+        android:text="@string/permission_description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/permission_title" />
+
+    <LinearLayout
+        android:id="@+id/content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default_double"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_default_double"
+        app:layout_constraintBottom_toTopOf="@id/permission_agreement_cb"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/permission_description" />
+
+    <CheckBox
+        android:id="@+id/permission_agreement_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default_quadruple"
+        android:layout_marginTop="@dimen/margin_default_double"
+        android:text="@string/legal_check_agreement"
+        android:textColorLink="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/accept_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content_ll" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/accept_btn"
+        style="@style/PrimaryButton"
+        android:layout_width="@dimen/button_width_default"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default_huge"
+        android:layout_marginTop="@dimen/margin_default_double"
+        android:layout_marginEnd="@dimen/margin_default_huge"
+        android:layout_marginBottom="@dimen/margin_default_double"
+        android:enabled="false"
+        android:text="@string/accept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/permission_agreement_cb"
+        tools:enabled="true" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/accept_permission_gp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="accept_btn,permission_agreement_cb" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

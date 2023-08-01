@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/home_dest">
+
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.home.HomeFragment"
+        android:label="@string/tab_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_dest_to_new_details_dest"
+            app:destination="@id/new_details_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_home_dest_to_app_details_dest"
+            app:destination="@id/app_details_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_home_dest_to_coronavirus_dest"
+            app:destination="@id/login_quiz_dest"
+            app:enterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_home_to_webview"
+            app:destination="@id/webview_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_home_dest_to_preferences_dest"
+            app:destination="@id/preferences_dest"
+            app:enterAnim="@anim/grow_in_top_end"
+            app:popExitAnim="@anim/grow_out_top_end" />
+
+        <action
+            android:id="@+id/action_home_to_preferences_dest"
+            app:destination="@id/preferences_dest"
+            app:enterAnim="@anim/grow_in_top_end"
+            app:popExitAnim="@anim/grow_out_top_end" />
+
+        <action
+            android:id="@+id/action_home_to_covid_cert_dest"
+            app:destination="@id/covid_cert_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_home_to_greenpass_dest"
+            app:destination="@id/hub_certificate_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+        <deepLink
+            android:id="@+id/deeplink_validate_qr"
+            app:uri="msspa.app.102://validate_qr?token={token}" />
+
+        <action
+            android:id="@+id/action_home_to_dynamic_questionaires"
+            app:destination="@id/dyn_quest_dashboard_dest" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/preferences_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.preferences.PreferencesFragment"
+        android:label="fragment_appointments"
+        tools:layout="@layout/fragment_preferences">
+        <action
+            android:id="@+id/action_preferences_dest_to_notifications_step_1_dest"
+            app:destination="@id/notifications_step_1_dest"
+            app:enterAnim="@anim/slide_from_bottom"
+            app:popExitAnim="@anim/slide_to_bottom" />
+        <action
+            android:id="@+id/action_preferences_dest_to_advices_dest"
+            app:destination="@id/advice_dest"
+            app:enterAnim="@anim/slide_from_bottom"
+            app:popExitAnim="@anim/slide_to_bottom"
+            app:popUpTo="@+id/advice_dest"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/help_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.help.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/about_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.about.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/notifications_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.notifications.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/action_notifications_to_notification_details"
+            app:destination="@id/notification_details_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notification_details_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.notifications.details.NotificationDetailsFragment"
+        android:label="fragment_notification_details"
+        tools:layout="@layout/fragment_notification_details" />
+
+    <fragment
+        android:id="@+id/new_details_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.news.details.NewDetailsFragment"
+        android:label="fragment_new_details"
+        tools:layout="@layout/fragment_news_details" />
+
+    <fragment
+        android:id="@+id/app_details_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.apps.details.AppDetailsFragment"
+        android:label="fragment_app_details"
+        tools:layout="@layout/fragment_app_details" />
+
+
+    <fragment
+        android:id="@+id/news_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.news.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_news_dest_to_new_details_dest"
+            app:destination="@id/new_details_dest" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/apps_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.apps.AppsFragment"
+        android:label="fragment_apps"
+        tools:layout="@layout/fragment_apps">
+        <action
+            android:id="@+id/action_apps_dest_to_app_details_dest"
+            app:destination="@id/app_details_dest"
+            app:popUpTo="@+id/apps_dest" />
+        <action
+            android:id="@+id/action_apps_dest_to_home_dest"
+            app:destination="@id/home_dest"
+            app:popUpTo="@+id/home_dest"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/login_quiz_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.covid.login.LoginCovidFragment"
+        android:label="@string/coronavirus_fragment"
+        tools:layout="@layout/fragment_login_covid">
+        <action
+            android:id="@+id/action_coronavirus_dest_to_quiz_dest"
+            app:destination="@id/quiz_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/home_dest"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_login_to_second_factor"
+            app:destination="@id/second_factor_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/login_quiz_dest" />
+        <deepLink
+            android:id="@+id/login_covid_deepLink"
+            app:uri="msspa.app.102://action=open_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/second_factor_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.covid.login.secondfactor.SecondFactorFragment"
+        android:label="@string/second_factor_title"
+        tools:layout="@layout/fragment_covid_second_factor">
+
+        <action
+            android:id="@+id/second_factor_to_quiz_dest"
+            app:destination="@id/quiz_dest"
+            app:enterAnim="@anim/slide_left"
+            app:launchSingleTop="true"
+            app:popExitAnim="@anim/slide_right"
+            app:popUpTo="@id/home_dest"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/legal_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.legal.LegalFragment"
+        android:label="fragment_legal"
+        tools:layout="@layout/fragment_legal">
+        <argument
+            android:name="key_first_access"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_legal_to_home_dest"
+            app:destination="@id/home_dest"
+            app:enterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
+            app:popUpTo="@id/legal_dest"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_legal_to_permission_dest"
+            app:destination="@id/access_permission_dest"
+            app:enterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
+            app:popUpTo="@id/legal_dest"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quiz_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.quiz.QuizFragment"
+        android:label="@string/quiz_fragment"
+        tools:layout="@layout/fragment_quiz">
+        <action
+            android:id="@+id/action_quiz_dest_to_quiz_result_dest"
+            app:destination="@id/quiz_result_dest"
+            app:enterAnim="@anim/slide_left"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/home_dest"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quiz_result_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.quiz.result.QuizResultFragment"
+        android:label="@string/quiz_result_fragment"
+        tools:layout="@layout/fragment_quiz_result" />
+
+    <fragment
+        android:id="@+id/webview_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.webview.WebViewFragment"
+        tools:layout="@layout/fragment_webview" />
+
+    <fragment
+        android:id="@+id/clicsalud_webview_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.dynamic.webview.ClicSaludWebViewFragment"
+        tools:layout="@layout/fragment_clicsalud_webview" />
+
+    <fragment
+        android:id="@+id/notifications_step_1_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.preferences.notifications.NotificationsStep1Fragment"
+        tools:layout="@layout/fragment_notifications_step_1">
+        <action
+            android:id="@+id/action_notifications_step_1_dest_to_notifications_step_2_dest"
+            app:destination="@id/notifications_step_2_dest"
+            app:enterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notifications_step_2_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.preferences.notifications.NotificationsStep2Fragment"
+        tools:layout="@layout/fragment_notifications_step_2">
+        <action
+            android:id="@+id/action_notifications_step_2_dest_to_preferences_dest"
+            app:destination="@id/preferences_dest"
+            app:exitAnim="@anim/slide_to_bottom"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/preferences_dest"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_notifications_step_2_dest_to_home_dest"
+            app:destination="@id/home_dest"
+            app:exitAnim="@anim/slide_to_bottom"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/home_dest"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/covid_cert_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.covid.certificate.CovidCertFragment"
+        tools:layout="@layout/fragment_covid_cert" />
+
+    <fragment
+        android:id="@+id/scan_qr_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.covid.scanner.ScanQRFragment"
+        tools:layout="@layout/fragment_scan_qr" />
+
+    <fragment
+        android:id="@+id/hub_certificate_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.covid.greenpass.GreenPassFragment"
+        tools:layout="@layout/fragment_greenpass_certificate">
+        <action
+            android:id="@+id/navigate_to_cert_detail"
+            app:destination="@id/certificate_detail_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/certificate_detail_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.covid.greenpass.detail.CertificateDetailFragment"
+        tools:layout="@layout/fragment_certificate_detail" />
+
+
+    <fragment
+        android:id="@+id/dynamic_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.dynamic.fragment.DynamicFragment"
+        tools:layout="@layout/fragment_dynamic">
+        <action
+            android:id="@+id/action_dynamic_to_webview"
+            app:destination="@id/webview_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_dynamic_screen_to_dynamic_screen"
+            app:destination="@+id/dynamic_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/monitoring_program_on_boarding_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.monitoring.dashboard.MonitoringDashboardFragment"
+        tools:layout="@layout/fragment_monitoring_on_boarding">
+
+        <action
+            android:id="@+id/action_on_boarding_to_monitoring_dest"
+            app:destination="@id/follow_up_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/follow_up_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.monitoring.MonitoringFragment"
+        tools:layout="@layout/fragment_follow_up" />
+
+    <fragment
+        android:id="@+id/monitoring_program_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.monitoring.list.MonitoringListFragment"
+        tools:layout="@layout/fragment_monitoring_program" />
+
+    <fragment
+        android:id="@+id/monitoring_program_detail_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.monitoring.detail.MonitoringDetailFragment"
+        tools:layout="@layout/fragment_monitoring_program_detail">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/monitoring_new_program_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.monitoring.newquestionnaire.NewMonitoringFragment"
+        tools:layout="@layout/fragment_monitoring_new">
+        <action
+            android:id="@+id/action_new_program_dest_to_detail_dest"
+            app:destination="@id/monitoring_program_detail_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/monitoring_program_dest"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="refresh_arg"
+                android:defaultValue="true" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/measurements_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.monitoring.measurements.MeasurementsFragment"
+        tools:layout="@layout/fragment_measurements">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/wallet_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.wallet.WalletFragment"
+        tools:layout="@layout/fragment_wallet">
+
+        <action
+            android:id="@+id/action_wallet_dest_to_detail_dest"
+            app:destination="@id/wallet_detail_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wallet_detail_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.wallet.detail.WalletDetailFragment"
+        tools:layout="@layout/fragment_wallet_detail">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/dyn_quest_dashboard_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.dynamic_questionnaires.dashboard.DynQuestDashboardFragment"
+        android:label="DynQuestDashboardFragment" />
+
+    <fragment
+        android:id="@+id/dyn_quest_list_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.dynamic_questionnaires.questionnaires.list.DynQuestListFragment"
+        tools:layout="@layout/fragment_dyn_quest_list"/>
+
+    <fragment
+        android:id="@+id/dyn_quest_detail_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.dynamic_questionnaires.questionnaires.detail.DynQuestDetailFragment"
+        tools:layout="@layout/fragment_dyn_quest_detail" />
+
+    <dialog
+        android:id="@+id/dyn_quest_help_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.dynamic_questionnaires.questionnaires.help.DynQuestHelpFragment"
+        tools:layout="@layout/fragment_dyn_quest_help" />
+
+    <fragment
+        android:id="@+id/dyn_quest_new_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.dynamic_questionnaires.questionnaires.newquest.DynQuestNewFragment"
+        tools:layout="@layout/fragment_dyn_quest_new">
+        <action
+            android:id="@+id/dyn_quest_new_dest_to_detail_dest"
+            app:destination="@id/dyn_quest_detail_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/dyn_quest_list_dest"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="refresh_arg"
+                android:defaultValue="true" />
+        </action>
+
+        <action
+            android:id="@+id/dyn_quest_new_dest_to_list_dest"
+            app:destination="@id/dyn_quest_list_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim"
+            app:popUpToInclusive="false">
+        </action>
+
+        <action
+            android:id="@+id/dyn_quest_new_dest_to_help_dest"
+            app:destination="@id/dyn_quest_help_dest" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/advice_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.advices.AdvicesFragment"
+        android:label="fragment_advices"
+        tools:layout="@layout/fragment_advices_list" >
+        <action
+            android:id="@+id/action_advices_to_advice_type"
+            app:destination="@id/new_advice_type_dest"
+            app:enterAnim="@anim/slide_left" />
+        <action
+            android:id="@+id/action_advices_to_new_advice"
+            app:destination="@id/new_advice_dest"
+            app:enterAnim="@anim/slide_left" />
+        <action
+            android:id="@+id/action_advices_to_detail_advice"
+            app:destination="@id/advice_detail_dest"
+            app:enterAnim="@anim/slide_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/new_advice_type_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.advices.types.NewAdviceTypeFragment"
+        android:label="fragment_new_advice_type"
+        tools:layout="@layout/fragment_new_advice_type" >
+        <action
+            android:id="@+id/action_advice_type_to_new_advice"
+            app:destination="@id/new_advice_dest"
+            app:enterAnim="@anim/slide_left" />
+        <action
+            android:id="@+id/action_advice_type_to_detail_advice"
+            app:destination="@id/advice_detail_dest"
+            app:enterAnim="@anim/slide_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/new_advice_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.advices.create.AdviceCreateFragment"
+        android:label="fragment_new_advice"
+        tools:layout="@layout/fragment_new_advice" >
+        <action
+            android:id="@+id/action_new_dest_to_advices_dest"
+            app:destination="@id/advice_dest"
+            app:exitAnim="@anim/slide_right"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/advice_dest"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_new_dest_to_configuration_dest"
+            app:destination="@id/preferences_dest"
+            app:exitAnim="@anim/slide_right"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/preferences_dest"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/advice_detail_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.advices.detail.AdviceDetailFragment"
+        android:label="fragment_detail_advice"
+        tools:layout="@layout/fragment_new_advice" >
+        <action
+            android:id="@+id/action_detail_dest_to_advices_dest"
+            app:destination="@id/advice_dest"
+            app:exitAnim="@anim/slide_right"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/advice_dest"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_detail_dest_to_configuration_dest"
+            app:destination="@id/preferences_dest"
+            app:exitAnim="@anim/slide_right"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/preferences_dest"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/access_permission_dest"
+        android:name="es.juntadeandalucia.msspa.saludandalucia.presentation.dynamic.permissions.PermissionsFragment"
+        tools:layout="@layout/fragment_dyn_permission">
+
+        <action
+            android:id="@+id/action_permission_to_home_dest"
+            app:destination="@id/home_dest"
+            app:enterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right"
+            app:popUpTo="@id/home_dest"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+</navigation>

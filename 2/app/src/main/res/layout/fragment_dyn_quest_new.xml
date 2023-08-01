@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aqua">
+
+    <TextView
+        android:id="@+id/title_section_tv"
+        style="@style/TitleText.Header.Monitoring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/content_cl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="@dimen/margin_default_double"
+        tools:text="Programa de seguimiento 1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/default_header_margin"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:background="@drawable/sh_rounded_rect_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/content_ns"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingHorizontal="@dimen/default_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/detail_title_tv"
+                    style="@style/TitleText.Header.Dynamic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_default_double"
+                    android:layout_marginTop="@dimen/margin_default_double"
+                    android:layout_marginBottom="@dimen/default_large_margin"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="@string/new_dyn_quest_title"
+                    app:layout_constraintBottom_toTopOf="@id/detail_title_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/quest_info_iv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/quest_info_iv"
+                    android:layout_width="@dimen/dynamic_quest_new_icon"
+                    android:layout_height="@dimen/dynamic_quest_new_icon"
+                    android:layout_marginEnd="@dimen/margin_default_double"
+                    android:src="@drawable/ic_info_clicsalud"
+                    app:layout_constraintBottom_toBottomOf="@id/detail_title_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/detail_title_tv"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/subtitle_tv"
+                    style="@style/SubtitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_default_double"
+                    android:layout_marginTop="@dimen/margin_default_double"
+                    android:layout_marginBottom="@dimen/default_large_margin"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="@string/new_dyn_quest_subtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/detail_title_tv"
+                    />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/questions_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_default_huge"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toTopOf="@id/send_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/subtitle_tv"
+                    android:paddingBottom="@dimen/default_padding"
+                    android:clipToPadding="false"
+                    tools:itemCount="7"
+                    tools:listitem="@layout/view_item_question_boolean" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/send_btn"
+                    style="@style/PrimaryButton.Monitoring"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_default_double"
+                    android:layout_marginTop="@dimen/margin_default_double"
+                    android:layout_marginBottom="@dimen/margin_default_double"
+                    android:fitsSystemWindows="false"
+                    android:text="@string/send_quiz"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/questions_rv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

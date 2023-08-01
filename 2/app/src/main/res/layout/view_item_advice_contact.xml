@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/avisas_contact_item_padding"
+    android:layout_marginStart="@dimen/avisas_button_margin_start"
+    android:layout_marginEnd="@dimen/avisas_button_margin_start">
+
+    <View
+        android:id="@+id/separator_v"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey_bg"
+        android:layout_marginStart="@dimen/new_advice_contact_separator_margin_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_iv"
+        android:layout_width="@dimen/margin_default_huge"
+        android:layout_height="@dimen/margin_default_huge"
+        android:src="@drawable/ic_user"
+        android:layout_marginTop="@dimen/new_advice_contact_separator_margin_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator_v" />
+
+    <TextView
+        android:id="@+id/user_tv"
+        style="@style/TitleText.Notification"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_default_huge"
+        android:layout_marginHorizontal="@dimen/new_advice_type_subtitle_margin_top"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@+id/delete_iv"
+        app:layout_constraintStart_toEndOf="@+id/user_iv"
+        app:layout_constraintTop_toTopOf="@+id/user_iv"
+        tools:text="Adolph Blaine Charles David Bell EquisdE" />
+
+    <ImageView
+        android:id="@+id/delete_iv"
+        android:layout_width="@dimen/card_default_radius"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_grey_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/user_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/user_tv"
+        app:layout_constraintStart_toEndOf="@id/user_tv"
+        app:tint="@color/black"/>
+
+    <TextView
+        android:id="@+id/status_tv"
+        style="@style/AvisasGreenRegularSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="@+id/user_tv"
+        app:layout_constraintTop_toBottomOf="@+id/user_tv"
+        tools:text="Solicitud aceptada"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

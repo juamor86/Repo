@@ -1,0 +1,228 @@
+{
+  "code": [
+    {
+      "code": "Ayuda",
+      "display": "Cuestionario de Ayuda",
+      "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+    }
+  ],
+  "date": "2021-05-20T18:00:00Z",
+  "extension": [
+    {
+      "url": "programa",
+      "valueReference": {
+        "display": "Programa genérico",
+        "id": "ProgramaGenerico",
+        "type": "CarePlan"
+      }
+    }
+  ],
+  "id": "3",
+  "identifier": [
+    {
+      "value": "AyudaMedicion"
+    }
+  ],
+  "item": [
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "Rango",
+            "display": "Rango válido",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "tipo"
+        },
+        {
+          "valueCoding": {
+            "code": "PresionArterial",
+            "display": "Presión Arterial",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "subtipo"
+        }
+      ],
+      "linkId": "1",
+      "required": false,
+      "text": "Rangos normales: xx -xxx mmhg",
+      "type": "display"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "Info",
+            "display": "Información de ayuda",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "tipo"
+        },
+        {
+          "valueCoding": {
+            "code": "PresionArterial",
+            "display": "Presión Arterial",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "subtipo"
+        }
+      ],
+      "linkId": "2",
+      "required": false,
+      "text": "Detalle de la ayuda de la presión arterial",
+      "type": "display"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "Rango",
+            "display": "Rango válido",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "tipo"
+        },
+        {
+          "valueCoding": {
+            "code": "Glucosa",
+            "display": "Glucosa",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "subtipo"
+        }
+      ],
+      "linkId": "3",
+      "required": false,
+      "text": "Rangos normales: xx -xxx mmhg",
+      "type": "display"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "Info",
+            "display": "Información de ayuda",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "tipo"
+        },
+        {
+          "valueCoding": {
+            "code": "Glucosa",
+            "display": "Glucosa",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "subtipo"
+        }
+      ],
+      "linkId": "4",
+      "required": false,
+      "text": "Detalle de la ayuda de la glucosa",
+      "type": "display"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "Rango",
+            "display": "Rango válido",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "tipo"
+        },
+        {
+          "valueCoding": {
+            "code": "FrecuenciaCardiaca",
+            "display": "Frecuencia cardíaca",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "subtipo"
+        }
+      ],
+      "linkId": "5",
+      "required": false,
+      "text": "Rangos normales: xx -xxx mmhg",
+      "type": "display"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "Info",
+            "display": "Información de ayuda",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "tipo"
+        },
+        {
+          "valueCoding": {
+            "code": "FrecuenciaCardiaca",
+            "display": "Frecuencia cardíaca",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "subtipo"
+        }
+      ],
+      "linkId": "6",
+      "required": false,
+      "text": "Detalle de la ayuda de la frecuencia cardíaca",
+      "type": "display"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "Rango",
+            "display": "Rango válido",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "tipo"
+        },
+        {
+          "valueCoding": {
+            "code": "SaturacionOxigeno",
+            "display": "Saturación Oxígeno",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "subtipo"
+        }
+      ],
+      "linkId": "7",
+      "required": false,
+      "text": "Rangos normales: xx -xxx mmhg",
+      "type": "display"
+    },
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "Info",
+            "display": "Información de ayuda",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "tipo"
+        },
+        {
+          "valueCoding": {
+            "code": "SaturacionOxigeno",
+            "display": "Saturación Oxígeno",
+            "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+          },
+          "url": "subtipo"
+        }
+      ],
+      "linkId": "8",
+      "required": false,
+      "text": "Detalle de la ayuda de la saturación de oxígeno",
+      "type": "display"
+    }
+  ],
+  "meta": {
+    "lastUpdated": "2021-06-11T12:23:52Z"
+  },
+  "name": "Ayuda Mediciones",
+  "purpose": "# Cuestionario de ayuda de las mediciones",
+  "resourceType": "Questionnaire",
+  "status": "active",
+  "title": "Ayuda Mediciones"
+}

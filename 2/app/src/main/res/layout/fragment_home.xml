@@ -1,0 +1,96 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:filterTouchesWhenObscured="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/home_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="es.juntadeandalucia.msspa.saludandalucia.presentation.home.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/home_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_default_double"
+                android:paddingHorizontal="@dimen/margin_default_horizontal"
+                app:layout_constraintBottom_toTopOf="@id/apps_section_title_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/apps_section_title_tv"
+                style="@style/DynamicText.Section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_default_horizontal"
+                android:layout_marginTop="@dimen/margin_default_huge"
+                android:text="@string/home_apps_section_title"
+                app:layout_constraintBottom_toTopOf="@id/apps_rv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_cl" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/apps_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default_horizontal_icons"
+                android:layout_marginTop="@dimen/margin_default_large"
+                android:layout_marginEnd="@dimen/margin_default_horizontal_icons"
+                android:layout_marginBottom="@dimen/margin_section_default"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/see_apps_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/apps_section_title_tv"
+                app:spanCount="@integer/app_span_count"
+                tools:itemCount="6"
+                tools:listitem="@layout/view_item_home_app"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/see_apps_btn"
+                style="@style/SecondaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_default_super_huge"
+                android:layout_marginBottom="@dimen/margin_default_extrahuge"
+                android:text="@string/btn_see_all"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/apps_rv"
+                app:layout_constraintStart_toStartOf="@id/apps_rv"
+                app:layout_constraintTop_toBottomOf="@id/apps_rv"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/apps_error_tv"
+                style="@style/DisclaimerText.Empty.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/margin_section_default"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/margin_default_double"
+                android:text="@string/apps_error"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/apps_rv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

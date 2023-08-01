@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:id="@+id/covid_cert_title_tv"
+            style="@style/TitleText.Header.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default_double"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_default_double"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Certificado de vacunación COVID-19" />
+
+        <ImageView
+            android:id="@+id/qr_cert_iv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/covid_cert_title_tv" />
+
+        <!-- User Data-->
+        <TextView
+            android:id="@+id/name_label_tv"
+            style="@style/LabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:text="@string/name_colon"
+            app:layout_constraintRight_toLeftOf="@id/name_value_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/qr_cert_iv" />
+
+        <TextView
+            android:id="@+id/name_value_tv"
+            style="@style/ValueText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/name_label_tv"
+            app:layout_constraintStart_toEndOf="@id/name_label_tv"
+            app:layout_constraintTop_toBottomOf="@id/qr_cert_iv"
+            tools:text="Carmen" />
+
+        <TextView
+            android:id="@+id/last_name_label_tv"
+            style="@style/LabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/last_name_colon"
+            app:layout_constraintRight_toLeftOf="@id/name_value_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_value_tv" />
+
+        <TextView
+            android:id="@+id/last_name_value_tv"
+            style="@style/ValueText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/last_name_label_tv"
+            app:layout_constraintStart_toEndOf="@id/last_name_label_tv"
+            app:layout_constraintTop_toBottomOf="@id/name_value_tv"
+            tools:text="Andaluza Andaluza" />
+
+        <TextView
+            android:id="@+id/id_label_tv"
+            style="@style/LabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/dni_colon"
+            app:layout_constraintRight_toLeftOf="@id/id_value_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/last_name_value_tv" />
+
+        <TextView
+            android:id="@+id/id_value_tv"
+            style="@style/ValueText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/id_label_tv"
+            app:layout_constraintTop_toBottomOf="@id/last_name_value_tv"
+            tools:text="123123123" />
+
+        <TextView
+            android:id="@+id/vacine_number_label_tv"
+            style="@style/LabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/nuhsa_colon"
+            app:layout_constraintRight_toLeftOf="@id/vaccine_admin_value_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/id_label_tv" />
+
+        <TextView
+            android:id="@+id/vaccine_admin_value_tv"
+            style="@style/ValueText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vacine_number_label_tv"
+            app:layout_constraintTop_toBottomOf="@id/id_value_tv"
+            tools:text="AN12345678" />
+
+        <TextView
+            android:id="@+id/cert_date_label_tv"
+            style="@style/LabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/vaccine_date_colon"
+            app:layout_constraintRight_toLeftOf="@id/cert_date_value_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vaccine_admin_value_tv" />
+
+
+        <TextView
+            android:id="@+id/cert_date_value_tv"
+            style="@style/ValueText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cert_date_label_tv"
+            app:layout_constraintTop_toBottomOf="@id/vaccine_admin_value_tv"
+            tools:text="22-01-2021" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/user_cert_info_gr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:constraint_referenced_ids="cert_date_label_tv, cert_date_value_tv, name_label_tv, name_value_tv, covid_cert_title_tv, id_label_tv,id_value_tv,last_name_label_tv, last_name_value_tv, vacine_number_label_tv, vaccine_admin_value_tv" />
+
+        <ImageView
+            android:id="@+id/empty_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_alert"
+            app:layout_constraintBottom_toTopOf="@id/empty_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/empty_tv"
+            style="@style/DisclaimerText.Empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            android:text="@string/not_vaccined"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/empty_iv" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/empty_view_gr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="empty_iv, empty_tv"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

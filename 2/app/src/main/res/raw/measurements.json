@@ -1,0 +1,2093 @@
+{
+  "entry": [
+    {
+      "resources": [
+        {
+          "author": {
+            "display": "FICTICIO ACTIVO, CIUDADANO",
+            "extension": [
+              {
+                "url": "plataforma"
+              }
+            ],
+            "type": "Patient"
+          },
+          "authored": "2021-06-02T17:13:29.299+02:00",
+          "extension": [
+            {
+              "valueDecimal": 1.0,
+              "url": "evaluacionNumerica"
+            },
+            {
+              "valueString": "Le recomendamos que contacte con Salud Responde en el teléfono gratuito 955 545 060.",
+              "url": "sugerencias"
+            }
+          ],
+          "id": "38",
+          "item": [
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "FrecuenciaCardiaca",
+                    "display": "Frecuencia cardíaca",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 20
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "FrecuenciaCardiaca",
+                        "display": "Frecuencia cardíaca",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "lpm"
+                    },
+                    {
+                      "valueInteger": 15,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "22",
+                  "text": "Pulso en reposo"
+                }
+              ],
+              "linkId": "1",
+              "text": "Anote EL NUMERO DE su pulso"
+            },
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "PresionArterial",
+                    "display": "Presión Arterial",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 50
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionSistolica",
+                        "display": "Presión Sistólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 40,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "15",
+                  "text": "Tensión Arterial Sistólica (TAS)"
+                },
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 30
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionDiastolica",
+                        "display": "Presion Diastólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 20,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 250,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "16",
+                  "text": "Tensión Arterial Diastólica (TAD)"
+                }
+              ],
+              "linkId": "2",
+              "text": "Anote EL NUMERO DE su tensión arterial"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "SaturacionOxigeno",
+                    "display": "Saturación Oxígeno",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "9",
+              "text": "Si tiene EPOC:"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": true
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "Glucosa",
+                    "display": "Glucosa",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "13",
+              "text": "Si tiene Diabetes:"
+            }
+          ],
+          "meta": {
+            "lastUpdated": "2021-06-02T17:13:29Z"
+          },
+          "questionnaire": "/usuarios/cuestionarios/PacienteCronico",
+          "resourceType": "QuestionnaireResponse",
+          "status": "completed",
+          "subject": {
+            "id": "209364394A6B34158B2600A81E05400E0ED0A1161",
+            "reference": "/usuarios/datosContacto/209364394A6B34158B2600A81E05400E0ED0A1161",
+            "type": "Patient"
+          }
+        },
+        {
+          "author": {
+            "display": "FICTICIO ACTIVO, CIUDADANO",
+            "extension": [
+              {
+                "url": "plataforma"
+              }
+            ],
+            "type": "Patient"
+          },
+          "authored": "2021-06-02T17:01:59.03+02:00",
+          "extension": [
+            {
+              "valueDecimal": 1.0,
+              "url": "evaluacionNumerica"
+            },
+            {
+              "valueString": "Le recomendamos que contacte con Salud Responde en el teléfono gratuito 955 545 060.",
+              "url": "sugerencias"
+            }
+          ],
+          "id": "37",
+          "item": [
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "FrecuenciaCardiaca",
+                    "display": "Frecuencia cardíaca",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 20
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "FrecuenciaCardiaca",
+                        "display": "Frecuencia cardíaca",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "lpm"
+                    },
+                    {
+                      "valueInteger": 15,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "22",
+                  "text": "Pulso en reposo"
+                }
+              ],
+              "linkId": "1",
+              "text": "Anote EL NUMERO DE su pulso"
+            },
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "PresionArterial",
+                    "display": "Presión Arterial",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 50
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionSistolica",
+                        "display": "Presión Sistólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 40,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "15",
+                  "text": "Tensión Arterial Sistólica (TAS)"
+                },
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 20
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionDiastolica",
+                        "display": "Presion Diastólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 20,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 250,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "16",
+                  "text": "Tensión Arterial Diastólica (TAD)"
+                }
+              ],
+              "linkId": "2",
+              "text": "Anote EL NUMERO DE su tensión arterial"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "SaturacionOxigeno",
+                    "display": "Saturación Oxígeno",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "9",
+              "text": "Si tiene EPOC:"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": true
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "Glucosa",
+                    "display": "Glucosa",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "13",
+              "text": "Si tiene Diabetes:"
+            }
+          ],
+          "meta": {
+            "lastUpdated": "2021-06-02T17:01:59Z"
+          },
+          "questionnaire": "/usuarios/cuestionarios/PacienteCronico",
+          "resourceType": "QuestionnaireResponse",
+          "status": "completed",
+          "subject": {
+            "id": "209364394A6B34158B2600A81E05400E0ED0A1161",
+            "reference": "/usuarios/datosContacto/209364394A6B34158B2600A81E05400E0ED0A1161",
+            "type": "Patient"
+          }
+        },
+        {
+          "author": {
+            "display": "FICTICIO ACTIVO, CIUDADANO",
+            "extension": [
+              {
+                "url": "plataforma"
+              }
+            ],
+            "type": "Patient"
+          },
+          "authored": "2021-06-02T13:07:44.003+02:00",
+          "extension": [
+            {
+              "valueDecimal": 0.0,
+              "url": "evaluacionNumerica"
+            },
+            {
+              "valueString": "No presenta signos ni síntomas de agudización de su enfermedad en este momento. ",
+              "url": "sugerencias"
+            }
+          ],
+          "id": "36",
+          "item": [
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "FrecuenciaCardiaca",
+                    "display": "Frecuencia cardíaca",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 80
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "FrecuenciaCardiaca",
+                        "display": "Frecuencia cardíaca",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "lpm"
+                    },
+                    {
+                      "valueInteger": 15,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "22",
+                  "text": "Pulso en reposo"
+                }
+              ],
+              "linkId": "1",
+              "text": "Anote EL NUMERO DE su pulso"
+            },
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "PresionArterial",
+                    "display": "Presión Arterial",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 80
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionSistolica",
+                        "display": "Presión Sistólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 40,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "15",
+                  "text": "Tensión Arterial Sistólica (TAS)"
+                },
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 80
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionDiastolica",
+                        "display": "Presion Diastólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 20,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 250,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "16",
+                  "text": "Tensión Arterial Diastólica (TAD)"
+                }
+              ],
+              "linkId": "2",
+              "text": "Anote EL NUMERO DE su tensión arterial"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "SaturacionOxigeno",
+                    "display": "Saturación Oxígeno",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "9",
+              "text": "Si tiene EPOC:"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "Glucosa",
+                    "display": "Glucosa",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "13",
+              "text": "Si tiene Diabetes:"
+            }
+          ],
+          "meta": {
+            "lastUpdated": "2021-06-02T13:07:44Z"
+          },
+          "questionnaire": "/usuarios/cuestionarios/PacienteCronico",
+          "resourceType": "QuestionnaireResponse",
+          "status": "completed",
+          "subject": {
+            "id": "209364394A6B34158B2600A81E05400E0ED0A1161",
+            "reference": "/usuarios/datosContacto/209364394A6B34158B2600A81E05400E0ED0A1161",
+            "type": "Patient"
+          }
+        },
+        {
+          "author": {
+            "display": "FICTICIO ACTIVO, CIUDADANO",
+            "extension": [
+              {
+                "url": "plataforma"
+              }
+            ],
+            "type": "Patient"
+          },
+          "authored": "2021-06-02T12:51:12.83+02:00",
+          "extension": [
+            {
+              "valueDecimal": 0.0,
+              "url": "evaluacionNumerica"
+            },
+            {
+              "valueString": "No presenta signos ni síntomas de agudización de su enfermedad en este momento. ",
+              "url": "sugerencias"
+            }
+          ],
+          "id": "35",
+          "item": [
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "FrecuenciaCardiaca",
+                    "display": "Frecuencia cardíaca",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 50
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "FrecuenciaCardiaca",
+                        "display": "Frecuencia cardíaca",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "lpm"
+                    },
+                    {
+                      "valueInteger": 15,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "22",
+                  "text": "Pulso en reposo"
+                }
+              ],
+              "linkId": "1",
+              "text": "Anote EL NUMERO DE su pulso"
+            },
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "PresionArterial",
+                    "display": "Presión Arterial",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 121
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionSistolica",
+                        "display": "Presión Sistólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 40,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "15",
+                  "text": "Tensión Arterial Sistólica (TAS)"
+                },
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 40
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionDiastolica",
+                        "display": "Presion Diastólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 20,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 250,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "16",
+                  "text": "Tensión Arterial Diastólica (TAD)"
+                }
+              ],
+              "linkId": "2",
+              "text": "Anote EL NUMERO DE su tensión arterial"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": true
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "SaturacionOxigeno",
+                    "display": "Saturación Oxígeno",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "9",
+              "text": "Si tiene EPOC:"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "Glucosa",
+                    "display": "Glucosa",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "13",
+              "text": "Si tiene Diabetes:"
+            }
+          ],
+          "meta": {
+            "lastUpdated": "2021-06-02T12:51:12Z"
+          },
+          "questionnaire": "/usuarios/cuestionarios/PacienteCronico",
+          "resourceType": "QuestionnaireResponse",
+          "status": "completed",
+          "subject": {
+            "id": "209364394A6B34158B2600A81E05400E0ED0A1161",
+            "reference": "/usuarios/datosContacto/209364394A6B34158B2600A81E05400E0ED0A1161",
+            "type": "Patient"
+          }
+        },
+        {
+          "author": {
+            "display": "FICTICIO ACTIVO, CIUDADANO",
+            "extension": [
+              {
+                "url": "plataforma"
+              }
+            ],
+            "type": "Patient"
+          },
+          "authored": "2021-06-02T11:07:24.912+02:00",
+          "extension": [
+            {
+              "valueDecimal": 0.0,
+              "url": "evaluacionNumerica"
+            },
+            {
+              "valueString": "No presenta signos ni síntomas de agudización de su enfermedad en este momento. ",
+              "url": "sugerencias"
+            }
+          ],
+          "id": "34",
+          "item": [
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "FrecuenciaCardiaca",
+                    "display": "Frecuencia cardíaca",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 100
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "FrecuenciaCardiaca",
+                        "display": "Frecuencia cardíaca",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "lpm"
+                    },
+                    {
+                      "valueInteger": 15,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "22",
+                  "text": "Pulso en reposo"
+                }
+              ],
+              "linkId": "1",
+              "text": "Anote EL NUMERO DE su pulso"
+            },
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "PresionArterial",
+                    "display": "Presión Arterial",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 100
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionSistolica",
+                        "display": "Presión Sistólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 40,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "15",
+                  "text": "Tensión Arterial Sistólica (TAS)"
+                },
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 100
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionDiastolica",
+                        "display": "Presion Diastólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 20,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 250,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "16",
+                  "text": "Tensión Arterial Diastólica (TAD)"
+                }
+              ],
+              "linkId": "2",
+              "text": "Anote EL NUMERO DE su tensión arterial"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "SaturacionOxigeno",
+                    "display": "Saturación Oxígeno",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "9",
+              "text": "Si tiene EPOC:"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "Glucosa",
+                    "display": "Glucosa",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "13",
+              "text": "Si tiene Diabetes:"
+            }
+          ],
+          "meta": {
+            "lastUpdated": "2021-06-02T11:07:24Z"
+          },
+          "questionnaire": "/usuarios/cuestionarios/PacienteCronico",
+          "resourceType": "QuestionnaireResponse",
+          "status": "completed",
+          "subject": {
+            "id": "209364394A6B34158B2600A81E05400E0ED0A1161",
+            "reference": "/usuarios/datosContacto/209364394A6B34158B2600A81E05400E0ED0A1161",
+            "type": "Patient"
+          }
+        },
+        {
+          "author": {
+            "display": "FICTICIO ACTIVO, CIUDADANO",
+            "extension": [
+              {
+                "url": "plataforma"
+              }
+            ],
+            "type": "Patient"
+          },
+          "authored": "2021-06-02T11:03:17.863+02:00",
+          "extension": [
+            {
+              "valueDecimal": 0.0,
+              "url": "evaluacionNumerica"
+            },
+            {
+              "valueString": "No presenta signos ni síntomas de agudización de su enfermedad en este momento. ",
+              "url": "sugerencias"
+            }
+          ],
+          "id": "33",
+          "item": [
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "FrecuenciaCardiaca",
+                    "display": "Frecuencia cardíaca",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 100
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "FrecuenciaCardiaca",
+                        "display": "Frecuencia cardíaca",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "lpm"
+                    },
+                    {
+                      "valueInteger": 15,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "22",
+                  "text": "Pulso en reposo"
+                }
+              ],
+              "linkId": "1",
+              "text": "Anote EL NUMERO DE su pulso"
+            },
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "PresionArterial",
+                    "display": "Presión Arterial",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 100
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionSistolica",
+                        "display": "Presión Sistólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 40,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "15",
+                  "text": "Tensión Arterial Sistólica (TAS)"
+                },
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 100
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionDiastolica",
+                        "display": "Presion Diastólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 20,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 250,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "16",
+                  "text": "Tensión Arterial Diastólica (TAD)"
+                }
+              ],
+              "linkId": "2",
+              "text": "Anote EL NUMERO DE su tensión arterial"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "SaturacionOxigeno",
+                    "display": "Saturación Oxígeno",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "9",
+              "text": "Si tiene EPOC:"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "Glucosa",
+                    "display": "Glucosa",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "13",
+              "text": "Si tiene Diabetes:"
+            }
+          ],
+          "meta": {
+            "lastUpdated": "2021-06-02T11:03:17Z"
+          },
+          "questionnaire": "/usuarios/cuestionarios/PacienteCronico",
+          "resourceType": "QuestionnaireResponse",
+          "status": "completed",
+          "subject": {
+            "id": "209364394A6B34158B2600A81E05400E0ED0A1161",
+            "reference": "/usuarios/datosContacto/209364394A6B34158B2600A81E05400E0ED0A1161",
+            "type": "Patient"
+          }
+        },
+        {
+          "author": {
+            "display": "FICTICIO ACTIVO, CIUDADANO",
+            "extension": [
+              {
+                "url": "plataforma"
+              }
+            ],
+            "type": "Patient"
+          },
+          "authored": "2021-06-02T09:37:44.982+02:00",
+          "extension": [
+            {
+              "valueDecimal": 0.0,
+              "url": "evaluacionNumerica"
+            },
+            {
+              "valueString": "No presenta signos ni síntomas de agudización de su enfermedad en este momento. ",
+              "url": "sugerencias"
+            }
+          ],
+          "id": "32",
+          "item": [
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "FrecuenciaCardiaca",
+                    "display": "Frecuencia cardíaca",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 120
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "FrecuenciaCardiaca",
+                        "display": "Frecuencia cardíaca",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "lpm"
+                    },
+                    {
+                      "valueInteger": 15,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "22",
+                  "text": "Pulso en reposo"
+                }
+              ],
+              "linkId": "1",
+              "text": "Anote EL NUMERO DE su pulso"
+            },
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "PresionArterial",
+                    "display": "Presión Arterial",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "item": [
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 40
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionSistolica",
+                        "display": "Presión Sistólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 40,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 350,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "15",
+                  "text": "Tensión Arterial Sistólica (TAS)"
+                },
+                {
+                  "answer": [
+                    {
+                      "valueInteger": 40
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "valueCoding": {
+                        "code": "Mediciones",
+                        "display": "Mediciones",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "tipo"
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PresionDiastolica",
+                        "display": "Presion Diastólica",
+                        "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                      },
+                      "url": "subtipo"
+                    },
+                    {
+                      "url": "unit",
+                      "valueCode": "mm/Hg"
+                    },
+                    {
+                      "valueInteger": 20,
+                      "url": "minValue"
+                    },
+                    {
+                      "valueInteger": 250,
+                      "url": "maxValue"
+                    },
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    }
+                  ],
+                  "linkId": "16",
+                  "text": "Tensión Arterial Diastólica (TAD)"
+                }
+              ],
+              "linkId": "2",
+              "text": "Anote EL NUMERO DE su tensión arterial"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "SaturacionOxigeno",
+                    "display": "Saturación Oxígeno",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "9",
+              "text": "Si tiene EPOC:"
+            },
+            {
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "Glucosa",
+                    "display": "Glucosa",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "boolean"
+                }
+              ],
+              "linkId": "13",
+              "text": "Si tiene Diabetes:"
+            }
+          ],
+          "meta": {
+            "lastUpdated": "2021-06-02T09:37:44Z"
+          },
+          "questionnaire": "/usuarios/cuestionarios/PacienteCronico",
+          "resourceType": "QuestionnaireResponse",
+          "status": "completed",
+          "subject": {
+            "id": "209364394A6B34158B2600A81E05400E0ED0A1161",
+            "reference": "/usuarios/datosContacto/209364394A6B34158B2600A81E05400E0ED0A1161",
+            "type": "Patient"
+          }
+        },
+        {
+          "author": {
+            "display": "FICTICIO ACTIVO, CIUDADANO",
+            "extension": [
+              {
+                "url": "plataforma"
+              }
+            ],
+            "type": "Patient"
+          },
+          "authored": "2021-06-02T09:35:27.485+02:00",
+          "extension": [
+            {
+              "valueDecimal": 0.0,
+              "url": "evaluacionNumerica"
+            },
+            {
+              "valueString": "No presenta signos ni síntomas de agudización de su enfermedad en este momento. ",
+              "url": "sugerencias"
+            }
+          ],
+          "id": "31",
+          "item": [
+            {
+              "answer": [],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "Mediciones",
+                    "display": "Mediciones",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "tipo"
+                },
+                {
+                  "valueCoding": {
+                    "code": "FrecuenciaCardiaca",
+                    "display": "Frecuencia cardíaca",
+                    "system": "http://terminology.hl7.org/CodeSystem/CAT_M_CATALOGO_TIPO"
+                  },
+                  "url": "subtipo"
+                },
+                {
+                  "url": "type",
+                  "valueCode": "group"
+                }
+              ],
+              "linkId": "1",
+              "text": "Anote EL NUMERO DE su pulso"
+            }
+          ],
+          "meta": {
+            "lastUpdated": "2021-06-02T09:35:27Z"
+          },
+          "questionnaire": "/usuarios/cuestionarios/PacienteCronico",
+          "resourceType": "QuestionnaireResponse",
+          "status": "completed",
+          "subject": {
+            "id": "209364394A6B34158B2600A81E05400E0ED0A1161",
+            "reference": "/usuarios/datosContacto/209364394A6B34158B2600A81E05400E0ED0A1161",
+            "type": "Patient"
+          }
+        }
+      ]
+    }
+  ],
+  "id": "859848995",
+  "link": [
+    {
+      "relation": "first",
+      "url": "http://10.235.71.132:80/msaludbk/usuarios/cuestionarios/respuestas?page=1&_count=50"
+    },
+    {
+      "relation": "self",
+      "url": "http://10.235.71.132:80/msaludbk/usuarios/cuestionarios/respuestas?page=1&_count=50"
+    },
+    {
+      "relation": "next",
+      "url": "http://10.235.71.132:80/msaludbk/usuarios/cuestionarios/respuestas?page=2&_count=50"
+    },
+    {
+      "relation": "last",
+      "url": "http://10.235.71.132:80/msaludbk/usuarios/cuestionarios/respuestas?page=4&_count=50"
+    }
+  ],
+  "meta": {
+    "lastUpdated": "2021-06-07T11:00:31Z"
+  },
+  "resourceType": "Bundle",
+  "total": 50,
+  "type": [
+    "searchset"
+  ]
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_default_double"
+    android:layout_marginRight="@dimen/margin_default_double"
+    android:layout_marginLeft="@dimen/margin_default_double">
+
+
+    <TextView
+        android:id="@+id/question_tv"
+        style="@style/TitleText.Question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default_double"
+        android:layout_marginTop="@dimen/default_huge_margin"
+        android:layout_marginEnd="@dimen/margin_default_double"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Texto de ejemplo" />
+
+
+    <TextView
+        android:id="@+id/subtitle_tv"
+        style="@style/SubtitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default_double"
+        android:layout_marginEnd="@dimen/margin_default_double"
+        android:text="@string/quiz_multiple_options_subtitle"
+        app:layout_constraintBottom_toTopOf="@id/option_1_cb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_tv" />
+
+
+    <CheckBox
+        android:id="@+id/option_1_cb"
+        style="@style/QuizRadioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/margin_default_double"
+        android:layout_marginTop="@dimen/margin_default_double"
+        app:layout_constraintBottom_toTopOf="@id/option_2_cb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_tv"
+        tools:checked="true"
+        tools:text="Option 1" />
+
+    <CheckBox
+        android:id="@+id/option_2_cb"
+        style="@style/QuizRadioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/margin_default_double"
+        android:layout_marginTop="@dimen/margin_default_double"
+        android:layout_marginBottom="@dimen/margin_default_double"
+        app:layout_constraintBottom_toTopOf="@id/option_3_cb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option_1_cb"
+        tools:text="Option 2" />
+
+    <CheckBox
+        android:id="@+id/option_3_cb"
+        style="@style/QuizRadioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/margin_default_double"
+        android:layout_marginBottom="@dimen/margin_default_double"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Option 3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

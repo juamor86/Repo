@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/text_answer_it"
+        style="@style/QuizTextInputLayout.Clicsalud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default_double"
+        android:hint="@string/enter_answer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/answer_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAutofill="noExcludeDescendants"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>

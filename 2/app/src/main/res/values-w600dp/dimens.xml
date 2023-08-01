@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_dyn_default_height">600dp</dimen>
+    <dimen name="on_boarding_default_image_size">400dp</dimen>
+    <dimen name="qr_size">400dp</dimen>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/llPopupMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:background="@drawable/sh_rounded_rect"
+    android:focusable="true"
+    android:gravity="top"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/DynamicText.QuickLauncher.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_default_double"
+        tool:text="Accesos rápidos a Mi Salud" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default_double">
+
+        <GridLayout
+            android:id="@+id/container_gl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/margin_default_half"
+            android:layout_marginEnd="@dimen/margin_default_half"
+            android:layout_weight="3"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:orientation="horizontal">
+
+        </GridLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

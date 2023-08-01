@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_default_large"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/gallery"
+    app:cardCornerRadius="16dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_default">
+
+        <ImageView
+            android:id="@+id/delete_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_close_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/monitoring_date_tv"
+            style="@style/TitleText.Monitoring"
+            android:layout_width="0dp"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default_double"
+            app:layout_constraintBottom_toTopOf="@id/monitoring_time_tv"
+            app:layout_constraintEnd_toStartOf="@id/delete_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/delete_iv"
+            android:layout_marginTop="@dimen/margin_default_large"
+            tools:text="Descripción" />
+
+        <TextView
+            android:id="@+id/monitoring_time_tv"
+            style="@style/SubtitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginBottom="@dimen/margin_default_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/monitoring_date_tv"
+            app:layout_constraintTop_toBottomOf="@id/monitoring_date_tv"
+            tools:text="16 NOV 20 12:32" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

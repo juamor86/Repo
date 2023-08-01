@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/notification_readed_vw"
+        android:layout_width="@dimen/notification_indicator_size"
+        android:layout_height="@dimen/notification_indicator_size"
+        android:paddingEnd="@dimen/margin_default"
+        android:background="@drawable/sh_notification_rounded"
+        app:layout_constraintTop_toTopOf="@id/notification_title_tv"
+        app:layout_constraintBottom_toBottomOf="@id/notification_title_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/notification_title_tv"/>
+
+    <TextView
+        android:id="@+id/notification_title_tv"
+        style="@style/TitleText.Notification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default_extrahuge"
+        android:layout_marginTop="@dimen/margin_default_double"
+        android:layout_marginEnd="@dimen/margin_default_double"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/notification_description_tv"
+        app:layout_constraintEnd_toStartOf="@id/notification_date_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Titulo prueba" />
+
+    <TextView
+        android:id="@+id/notification_date_tv"
+        style="@style/TitleText.Notification.DateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default_triple"
+        android:layout_marginTop="@dimen/margin_default_double"
+        android:layout_marginEnd="@dimen/margin_default_double"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/notification_description_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/notification_title_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="20-02-2020" />
+
+    <TextView
+        android:id="@+id/notification_description_tv"
+        style="@style/SubtitleText.Notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default_extrahuge"
+        android:layout_marginEnd="@dimen/margin_default_double"
+        android:layout_marginBottom="@dimen/margin_default_double"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintTop_toBottomOf="@id/notification_title_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        tools:text="@string/lorem_ipsum" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/notification_description_tv"
+        app:layout_constraintStart_toStartOf="@+id/notification_description_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

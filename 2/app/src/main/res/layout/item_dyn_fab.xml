@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:layout_marginTop="@dimen/margin_default"
+    android:layout_marginBottom="@dimen/margin_default"
+    android:layout_marginStart="@dimen/margin_default_half"
+    android:layout_marginEnd="@dimen/margin_default_half"
+    android:orientation="vertical"
+    tool:layout_width="match_parent">
+
+    <LinearLayout
+        android:id="@+id/header_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sh_rounded_small_rect"
+        android:backgroundTint="@color/aqua"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="@dimen/dyn_fab_iv_size"
+            android:layout_height="@dimen/dyn_fab_iv_size"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_default_double"
+            app:tint="@color/white"
+            tool:src="@drawable/ic_home" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dyn_fab_title_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginHorizontal="@dimen/margin_default"
+            android:layout_marginBottom="@dimen/margin_default_double"
+            android:fontFamily="@font/open_sans_bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tool:text="Agenda Sanitaria" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/children_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default_double"
+        android:backgroundTint="@color/white"
+        android:clipToPadding="false"
+        android:padding="3dp"
+        android:orientation="vertical" />
+
+</LinearLayout>

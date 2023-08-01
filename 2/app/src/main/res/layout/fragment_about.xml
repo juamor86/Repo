@@ -1,0 +1,103 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:filterTouchesWhenObscured="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/img_margin_default"
+        tools:context="es.juntadeandalucia.msspa.saludandalucia.presentation.about.AboutFragment">
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/TitleText.Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_default_large"
+            android:layout_marginLeft="@dimen/margin_default_large"
+            android:layout_marginTop="@dimen/margin_default_large"
+            android:text="@string/sponsors"
+            app:layout_constraintBottom_toTopOf="@id/subtitle_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitle_tv"
+            style="@style/SubtitleText"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default_large"
+            android:layout_marginRight="@dimen/margin_default_large"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toTopOf="@id/feder_iv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+        <ImageView
+            android:id="@+id/feder_iv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/img_margin_default"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_red_es"
+            app:layout_constraintBottom_toTopOf="@id/separator1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle_tv" />
+
+        <View
+            android:id="@+id/separator1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@id/redes_iv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/feder_iv" />
+
+        <ImageView
+            android:id="@+id/redes_iv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/img_margin_default"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_junta_about"
+            app:layout_constraintBottom_toTopOf="@id/separator2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separator1" />
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@id/junta_iv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/redes_iv" />
+
+        <ImageView
+            android:id="@+id/junta_iv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_default_large"
+            android:layout_marginLeft="@dimen/margin_default_large"
+            android:layout_margin="@dimen/img_margin_default"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_feder_about"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separator2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,164 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_covid_sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:filterTouchesWhenObscured="true"
+    tools:context="es.juntadeandalucia.msspa.saludandalucia.presentation.covid.login.LoginCovidFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_covid_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/TitleText.Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:text="@string/preferences_verification_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/step_1_tv"
+            style="@style/SubtitleText.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/default_separator"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:text="@string/preferences_verification_step_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+        <View
+            android:id="@+id/step_1_v"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:background="@color/colorAccent"
+            app:layout_constraintEnd_toStartOf="@id/step_2_v"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/step_1_tv" />
+
+        <View
+            android:id="@+id/step_2_v"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:background="@color/primary_light_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/step_1_v"
+            app:layout_constraintTop_toBottomOf="@id/step_1_tv" />
+
+        <TextView
+            android:id="@+id/phone_tv"
+            style="@style/TitleText.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/margin_default_huge"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:text="@string/phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/step_1_v" />
+
+        <TextView
+            android:id="@+id/phone_disclaimer_tv"
+            style="@style/SubtitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/default_separator"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:text="@string/preferences_verification_phone_disclaimer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone_tv" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_prefix_it"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/card_default_margin"
+            android:hint="@string/country"
+            app:hintTextColor="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone_disclaimer_tv">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:nextFocusForward="@id/phone_et" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_it"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default_double"
+            android:layout_marginTop="@dimen/card_default_margin"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:hint="@string/enter_phone"
+            app:hintTextColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/phone_prefix_it"
+            app:layout_constraintTop_toBottomOf="@id/phone_disclaimer_tv">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionGo"
+                android:inputType="number"
+                android:maxLength="9"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/verification_step_1_continue_bt"
+            style="@style/PrimaryButton"
+            android:layout_width="@dimen/button_width_default"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default_huge"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_default_huge"
+            android:layout_marginBottom="@dimen/margin_default_double"
+            android:text="@string/continue_str"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone_it"
+            app:layout_constraintVertical_bias="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

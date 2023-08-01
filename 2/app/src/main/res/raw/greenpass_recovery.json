@@ -1,0 +1,34 @@
+{
+  "id": "123423",
+  "resourceType": "DocumentReference",
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "code": "pruebas",
+        "display": "Certificado de pruebas"
+      }
+    ]
+  },
+  "relatesTo": [
+    {
+      "code": "transforms",
+      "target": {
+        "reference": "/usuarios/historia/certificado?enfermedad=covid19&type=pruebas&format=Print",
+        "type": "DocumentReference",
+        "display": "Recuperación del COVID-19"
+      }
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/jwt",
+        "data": ""
+      },
+      "format": {
+        "code": "View"
+      }
+    }
+  ]
+}
