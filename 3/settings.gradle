@@ -1,4 +1,0 @@
-include ':app'
-include ':msspa-authentication-library'
-rootProject.name = "mSSPA Authentication"
-include ':dniedroid-release'
