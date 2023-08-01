@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:filterTouchesWhenObscured="true"
+    android:theme="@style/Theme.MaterialComponents.Light">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/MSSPAAuthTitleText.Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:text="@string/msspa_auth_mobile_phone_validation_title"
+            app:layout_constraintBottom_toTopOf="@id/title_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/code_tv"
+            style="@style/MSSPAAuthTitleText.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:text="@string/msspa_auth_mobile_phone_validation_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+        <TextView
+            android:id="@+id/identifier_tv"
+            style="@style/MSSPAAuthTitleText.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:text="@string/msspa_auth_validate_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/code_tv" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/code_it"
+            style="@style/MSSPAAuthTextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:hint="@string/msspa_auth_enter_validate_code"
+            app:hintTextColor="@color/green_selected"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/identifier_tv">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/code_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:maxLength="6"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continue_bt"
+            style="@style/MSSPAAuthPrimaryButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/default_large_margin"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            android:layout_marginBottom="@dimen/default_huge_margin"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingStart="@dimen/default_large_margin"
+            android:paddingEnd="@dimen/default_large_margin"
+            android:text="@string/msspa_auth_validate"
+            app:layout_constraintBottom_toTopOf="@id/explanation_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/code_it"
+            app:layout_constraintVertical_bias="1" />
+
+        <TextView
+            android:id="@+id/explanation_tv"
+            style="@style/MSSPAAuthTitleText.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/default_huge_margin"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            android:linksClickable="true"
+            android:gravity="center"
+            android:text="@string/msspa_auth_refresh_totp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/continue_bt" />
+
+        <ProgressBar
+            android:id="@+id/countdown_pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:indeterminate="false"
+            android:padding="0dp"
+            android:progressDrawable="@drawable/ic_ring"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/explanation_tv"
+            tools:progress="25" />
+
+        <TextView
+            android:id="@+id/countdown_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="59"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/countdown_pb"
+            app:layout_constraintLeft_toLeftOf="@id/countdown_pb"
+            app:layout_constraintRight_toRightOf="@id/countdown_pb"
+            app:layout_constraintTop_toTopOf="@id/countdown_pb" />
+
+        <ImageView
+            android:id="@+id/refresh_bt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/default_huge_margin"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/default_huge_margin"
+            android:layout_marginBottom="@dimen/default_huge_margin"
+            android:src="@drawable/ic_refresh"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/explanation_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/timer_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="countdown_pb, refresh_bt" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/autentication_method_cw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_large_margin"
+            android:layout_marginTop="@dimen/default_large_margin"
+            android:layout_marginEnd="@dimen/default_large_margin"
+            android:layout_marginBottom="@dimen/default_large_margin"
+            app:cardUseCompatPadding="true"
+            android:background="@drawable/card_login_selector"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintTop_toBottomOf="@+id/timer_barrier"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/profile_tv"
+                    android:layout_width="@dimen/default_huge_margin"
+                    android:layout_height="@dimen/default_huge_margin"
+                    android:layout_marginStart="@dimen/default_large_margin"
+                    android:layout_marginTop="@dimen/margin_default"
+                    android:layout_marginBottom="@dimen/margin_default"
+                    android:src="@drawable/ic_baseline_account_circle_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title_card_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msspa_auth_other_auth_methods"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="@dimen/margin_default_double"
+                    android:layout_marginTop="@dimen/card_top_margin_default"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/profile_tv"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/subtitle_card_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_default_double"
+                    android:layout_marginTop="@dimen/margin_default"
+                    android:layout_marginEnd="@dimen/default_large_margin"
+                    android:layout_marginBottom="@dimen/card_bottom_margin_default"
+                    android:text="@string/msspa_auth_access_from_here_to_others"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profile_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_card_tv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,120 @@
+<resources>
+    <style name="MSSPAAuthAppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/shape_rounded_rect_top</item>
+    </style>
+
+    <style name="MSSPAAuthAppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MSSPAAuthAppModalStyle</item>
+    </style>
+
+    <style name="MSSPAAuthPrimaryButton">
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/button_enable_disable_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingStart">@dimen/margin_default</item>
+        <item name="android:paddingEnd">@dimen/margin_default</item>
+    </style>
+
+    <style name="MSSPAAuthSecondaryButton">
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/secondary_button_enable_disable_bg</item>
+        <item name="android:textColor">@color/green_selected</item>
+        <item name="android:paddingStart">@dimen/margin_default</item>
+        <item name="android:paddingEnd">@dimen/margin_default</item>
+    </style>
+
+    <style name="MSSPAAuthPrimaryButton.ButtonDialog">
+        <item name="android:paddingStart">@dimen/margin_default</item>
+        <item name="android:paddingEnd">@dimen/margin_default</item>
+    </style>
+
+    <style name="MSSPAAuthPrimaryButton.ButtonDialog.CancelButton">
+        <item name="android:background">@drawable/sel_boolean_button_bg</item>
+        <item name="android:textColor">@color/sel_boolean_button_text_color</item>
+        <item name="drawableTint">@color/sel_boolean_button_text_color</item>
+    </style>
+
+    <style name="MSSPAAuthPrimaryButton.ButtonDialog.CancelButton.Info">
+        <item name="android:background">@drawable/selector_button_confirm</item>
+        <item name="android:textColor">@color/blue_chill</item>
+    </style>
+
+    <style name="MSSPAAuthPrimaryButton.ButtonDialog.Info">
+        <item name="android:background">@drawable/selector_accept_button_confirm</item>
+    </style>
+
+    <style name="MSSPAAuthTitleText">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/green_dark</item>
+    </style>
+
+    <style name="MSSPAAuthTitleText.Section">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="MSSPAAuthTitleText.Medium">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="MSSPAAuthTitleText.Small">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/green_dark</item>
+    </style>
+
+    <style name="MSSPAAuthTextInputCursor" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="colorControlActivated">@color/green_selected</item>
+    </style>
+
+    <style name="MSSPAAuthTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="boxStrokeColor">@color/green_selected</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxBackgroundColor">@color/light_grey_bg</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColor">@color/green_selected</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:theme">@style/MSSPAAuthTextInputCursor</item>
+    </style>
+
+    <style name="MSSPAAuthCheckbox">
+        <item name="android:buttonTint">@color/green_selected</item>
+    </style>
+
+    <style name="MSSPAAuthUserAdvice">
+        <item name="android:paddingTop">@dimen/default_padding</item>
+        <item name="android:paddingBottom">@dimen/default_padding</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MSSPAAuthUserAdvice.TopEnd">
+        <item name="android:paddingLeft">40dp</item>
+        <item name="android:background">@drawable/advice_topend_bg</item>
+    </style>
+
+    <style name="MSSPAAuthUserAdvice.BottomStart">
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:background">@drawable/advice_bottomstart_bg</item>
+    </style>
+
+    <style name="MSSPAAuthSubtitleText">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/light_grey</item>
+    </style>
+
+    <style name="MSSPAAuthSubtitleText.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:filterTouchesWhenObscured="true"
+    android:theme="@style/Theme.MaterialComponents.Light">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/MSSPAAuthTitleText.Section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:text="@string/dnie_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/dnie_help_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="@id/title_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/title_tv"
+            app:layout_constraintTop_toTopOf="@id/title_tv" />
+
+        <TextView
+            android:id="@+id/add_can_tv"
+            style="@style/MSSPAAuthTitleText.Section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/default_huge_margin"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:text="@string/add_can"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+        <ImageView
+            android:id="@+id/add_can_help_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="@id/add_can_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/add_can_tv"
+            app:layout_constraintTop_toTopOf="@id/add_can_tv" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/can_it"
+            style="@style/MSSPAAuthTextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_can_tv">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/can_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLength="8"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continue_bt"
+            style="@style/MSSPAAuthPrimaryButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_section_default"
+            android:layout_marginTop="@dimen/default_large_margin"
+            android:layout_marginEnd="@dimen/margin_section_default"
+            android:layout_marginBottom="@dimen/default_huge_margin"
+            android:enabled="true"
+            android:gravity="center"
+            android:paddingStart="@dimen/default_large_margin"
+            android:paddingEnd="@dimen/default_large_margin"
+            android:text="@string/msspa_auth_continue_validation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/can_it"
+            app:layout_constraintVertical_bias="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

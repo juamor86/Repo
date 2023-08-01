@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorAccent">@color/green_selected</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000</color>
+    <color name="jungle_green_10">#19007a33</color>
+    <color name="green_dark">#203121</color>
+    <color name="green_selected">#007A33</color>
+    <color name="light_grey">#8790A3</color>
+    <color name="light_grey_bg">#F2F2F2</color>
+    <color name="padua">#7CB996</color>
+    <color name="acapulco">#64A886</color>
+    <color name="palidgreen">#ecf6ec</color>
+    <color name="blue_chill">#0E7F94</color>
+</resources>
