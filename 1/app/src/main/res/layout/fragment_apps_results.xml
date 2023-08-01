@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/tittle_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_layout_top"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_iv"
+            android:layout_width="@dimen/height_settings_icon"
+            android:layout_height="@dimen/height_settings_icon"
+            android:layout_marginStart="@dimen/margin_start_settings_icon"
+            android:contentDescription="@string/apps_analysis_icon_alt"
+            android:src="@drawable/ic_apps"
+            app:layout_constraintEnd_toStartOf="@id/status_dot_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/status_dot_iv"
+            android:layout_width="@dimen/height_incidences_dot"
+            android:layout_height="@dimen/height_incidences_dot"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_start_incidences_dot"
+            android:contentDescription="@string/apps_dot_icon_alt"
+            android:src="@drawable/green_dot"
+            app:layout_constraintEnd_toStartOf="@+id/numb_incidences_tv"
+            app:layout_constraintStart_toEndOf="@+id/icon_iv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/numb_incidences_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_start_num_incidences"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/status_dot_iv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/incidences_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_start_incidences"
+            android:gravity="start|center_vertical"
+            android:text="@string/incidences"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/numb_incidences_tv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/apps_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_text_top"
+        android:gravity="center_vertical"
+        android:text="@string/analyzed_apps"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tittle_ll" />
+
+
+    <TextView
+        android:id="@+id/apps_analyzed_number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_incidences"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintStart_toEndOf="@id/apps_tv"
+        app:layout_constraintTop_toBottomOf="@id/tittle_ll"
+        tools:text="0" />
+
+    <LinearLayout
+        android:id="@+id/selector_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_selector"
+        android:layout_marginStart="@dimen/margin_start_selector"
+        android:layout_marginTop="@dimen/landscape_size_10"
+        android:layout_marginEnd="@dimen/margin_start_selector"
+        android:background="@drawable/sh_item_tab_selector"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:weightSum="10"
+        app:layout_constraintTop_toBottomOf="@+id/apps_analyzed_number_tv">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/critical_btn"
+            style="@style/TabButtonSelected"
+            android:layout_width="@dimen/null_width"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@drawable/sh_item_tab_selector_button_pressed"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="@string/critical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/atention_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/atention_btn"
+            style="@style/TabButtonUnSelected"
+            android:layout_width="@dimen/null_width"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@drawable/sh_item_tab_selector"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="@string/attention_required"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/critical_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/apps_subtitle_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_text_top"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_start_text_top"
+        android:gravity="center_vertical"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selector_ll"
+        tools:text="Subtitulo" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/apps_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_default_double"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/apps_subtitle_tv"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ok_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default_double"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apps_subtitle_tv">
+
+        <ImageView
+            android:id="@+id/ok_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/analysis_ok_icon_alt"
+            android:src="@drawable/ic_ok"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_text"
+            android:gravity="center"
+            android:text="@string/everything_ok"
+            android:textColor="@color/unselected_button_text"
+            android:textSize="@dimen/text_size_22"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ok_iv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <LinearLayout
+        android:id="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/landscape_size_16"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/analysis_ic"
+            android:layout_width="@dimen/results_icon_dimens"
+            android:layout_height="@dimen/results_icon_dimens"
+            android:layout_marginStart="@dimen/little_margin"
+            android:contentDescription="@string/analysis_icon_alt"
+            app:srcCompat="@drawable/ic_incidences" />
+
+        <TextView
+            android:id="@+id/inciences_detected_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/results_title_height"
+            android:layout_marginTop="@dimen/margin_tinny"
+            android:layout_marginEnd="@dimen/margin_logos"
+            android:text="@string/incidences_detected"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/settings_results_cv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/attention_item_height"
+        android:layout_marginHorizontal="@dimen/results_cv_margin_h"
+        android:layout_marginTop="@dimen/landscape_size_16"
+        app:cardBackgroundColor="@color/incidence"
+        app:cardCornerRadius="@dimen/splash_Card_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tittle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/results_cv_margin_start"
+                android:contentDescription="@string/settings_analysis_icon_alt"
+                android:src="@drawable/ic_settings_analysis"
+                app:layout_constraintEnd_toStartOf="@id/analysis_name_tv"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/analysis_name_tv"
+                android:layout_width="@dimen/results_cv_text_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/results_cv_text_margin_start"
+                android:ellipsize="end"
+                android:gravity="start|center_vertical"
+                android:text="@string/settings"
+                android:textColor="@color/text_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/device_analysis_dot_iv"
+                app:layout_constraintStart_toEndOf="@id/icon_iv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/device_analysis_dot_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/results_dot_margin_end"
+                android:contentDescription="@string/settings_dot_icon_alt"
+                android:src="@drawable/red_dot"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/settings_numb_incidences_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/device_analysis_dot_iv"
+                app:layout_constraintStart_toEndOf="@id/device_analysis_dot_iv"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/incidences_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/results_cv_margin_super_small"
+                android:gravity="start|center_vertical"
+                android:text="@string/incidences"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/arrow_iv"
+                app:layout_constraintStart_toEndOf="@+id/settings_numb_incidences_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/arrow_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_tinny"
+                android:layout_marginEnd="@dimen/results_cv_arrow_margin"
+                android:layout_marginBottom="@dimen/margin_tinny"
+                android:contentDescription="@string/right_arrow_icon_alt"
+                android:src="@drawable/right_arrow_button_ic"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/application_results_cv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/attention_item_height"
+        android:layout_marginHorizontal="@dimen/results_cv_margin_h"
+        android:layout_marginTop="@dimen/margin_top_small"
+        app:cardBackgroundColor="@color/noIncidence"
+        app:cardCornerRadius="@dimen/splash_Card_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_results_cv">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/applications_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/results_cv_margin_start"
+                android:contentDescription="@string/apps_analysis_icon_alt"
+                android:src="@drawable/ic_apps"
+                app:layout_constraintEnd_toStartOf="@id/applications_tv"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/applications_tv"
+                android:layout_width="@dimen/results_cv_text_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/results_cv_text_margin_start"
+                android:ellipsize="end"
+                android:gravity="start|center_vertical"
+                android:text="@string/apps"
+                android:textColor="@color/text_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/applications_analysis_dot_iv"
+                app:layout_constraintStart_toEndOf="@id/applications_iv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/applications_analysis_dot_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/results_dot_margin_end"
+                android:contentDescription="@string/apps_dot_icon_alt"
+                android:src="@drawable/green_dot"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/applications_incidences_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/applications_analysis_dot_iv"
+                app:layout_constraintStart_toEndOf="@id/applications_analysis_dot_iv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/application_incidences_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/results_cv_margin_super_small"
+                android:gravity="start|center_vertical"
+                android:text="@string/incidences"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/applications_incidences_number_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_tinny"
+                android:layout_marginEnd="@dimen/results_cv_arrow_margin"
+                android:layout_marginBottom="@dimen/margin_tinny"
+                android:contentDescription="@string/right_arrow_icon_alt"
+                android:src="@drawable/right_arrow_button_ic"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/system_results_cv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/attention_item_height"
+        android:layout_marginHorizontal="@dimen/results_cv_margin_h"
+        android:layout_marginTop="@dimen/margin_top_small"
+        app:cardBackgroundColor="@color/review"
+        app:cardCornerRadius="@dimen/splash_Card_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/application_results_cv">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/system_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/results_cv_margin_start"
+                android:contentDescription="@string/permissions_analysis_icon_alt"
+                android:src="@drawable/ic_permissions"
+                app:layout_constraintEnd_toStartOf="@id/permissions_tv"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/permissions_tv"
+                android:layout_width="@dimen/results_cv_text_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/results_cv_text_margin_start"
+                android:layout_marginEnd="@dimen/results_cv_text_margin_end"
+                android:ellipsize="end"
+                android:gravity="start|center_vertical"
+                android:text="@string/system"
+                android:textColor="@color/text_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/permissions_analysis_dot_iv"
+                app:layout_constraintStart_toEndOf="@id/system_iv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/permissions_analysis_dot_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/results_dot_margin_end"
+                android:contentDescription="@string/permissions_dot_icon_alt"
+                android:src="@drawable/yellow_dot"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/system_incidences_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/permissions_analysis_dot_iv"
+                app:layout_constraintStart_toEndOf="@id/permissions_analysis_dot_iv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/system_incidences_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/results_cv_margin_super_small"
+                android:gravity="start|center_vertical"
+                android:text="@string/review"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/system_incidences_number_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_tinny"
+                android:layout_marginEnd="@dimen/results_cv_arrow_margin"
+                android:layout_marginBottom="@dimen/margin_tinny"
+                android:contentDescription="@string/right_arrow_icon_alt"
+                android:src="@drawable/right_arrow_button_ic"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ok_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_small"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tittle"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ok_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/analysis_ok_icon_alt"
+            android:src="@drawable/ic_ok"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_small"
+            android:gravity="center"
+            android:text="@string/everything_ok"
+            android:textColor="@color/unselected_button_text"
+            android:textSize="@dimen/text_size_22"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ok_iv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/advices_cv"
+        android:layout_width="@dimen/results_cv_advices_width"
+        android:layout_height="@dimen/height_cardView_bottom"
+        android:layout_marginBottom="@dimen/landscape_size_16"
+        app:cardBackgroundColor="@color/button_grey"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/whatsapp_cv"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/advices_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="@dimen/margin_start_logo_bottom"
+                android:contentDescription="@string/advices_icon_alt"
+                android:src="@drawable/ic_advices"
+                app:layout_constraintEnd_toStartOf="@id/advices_tv"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/advices_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_end_text_cardView_bottom"
+                android:gravity="end|center_vertical"
+                android:text="@string/advices"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/advices_iv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/whatsapp_cv"
+        android:layout_width="@dimen/results_cv_advices_width"
+        android:layout_height="@dimen/height_cardView_bottom"
+        android:layout_marginBottom="@dimen/landscape_size_16"
+        app:cardBackgroundColor="@color/button_grey"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/advices_cv">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin_horizontal_cardView_bottom"
+            android:contentDescription="@string/whatsapp_icon_alt"
+            android:src="@drawable/ic_whatsapp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

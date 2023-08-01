@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/warnings_dest"
+        android:icon="@drawable/ic_alerts"
+        android:title="@string/warnings"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/osi_dest"
+        android:title="@string/osi_tips"
+        android:icon="@drawable/ic_advices"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/drop_menu_iv"
+        android:title="@string/menu"
+        android:icon="@drawable/ic_dots"
+        app:showAsAction="always">
+    <menu>
+        <item
+            android:id="@id/action_home_dest_to_default_analysis_dest"
+            android:title="@string/analysis_type"
+            android:icon="@drawable/ic_analysis_predet"/>
+        <item
+            android:id="@+id/menu_help"
+            android:title="@string/help"
+            android:icon="@drawable/ic_help"/>
+        <item
+            android:id="@+id/action_home_dest_to_legal_dest"
+            android:visible="false"
+            android:title="@string/terms_and_conditions_tittle"
+            android:icon="@drawable/ic_term"/>
+    </menu>
+    </item>
+
+</menu>

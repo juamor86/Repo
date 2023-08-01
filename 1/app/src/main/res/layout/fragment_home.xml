@@ -1,0 +1,208 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <pl.bclogic.pulsator4droid.library.PulsatorLayout
+        android:id="@+id/scan_ic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/landscape_size_210"
+        app:layout_constraintBottom_toTopOf="@id/analysis_message_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:pulse_color="@color/home_button"
+        app:pulse_count="5"
+        app:pulse_duration="4000"
+        app:pulse_interpolator="Linear"
+        app:pulse_repeat="0"
+        app:pulse_startFromScratch="true">
+
+        <View
+            android:id="@+id/circle_container"
+            android:layout_width="@dimen/home_big_button"
+            android:layout_height="@dimen/home_big_button"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="false"
+            android:background="@drawable/button_internal_shape" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/home_big_button"
+            android:layout_height="@dimen/home_big_button"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/landscape_size_16">
+
+            <TextView
+                android:id="@+id/analysis_tv"
+                style="@style/ButtonCenteredWhiteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/landscape_size_10"
+                android:text="@string/analyze_device"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/play_analysis_icon_alt"
+                android:src="@drawable/ic_baseline_play_arrow_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/analysis_tv"
+                app:layout_constraintStart_toStartOf="@+id/analysis_tv"
+                app:layout_constraintTop_toBottomOf="@+id/analysis_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+    <TextView
+        android:id="@+id/analysis_message_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_basic"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toTopOf="@id/last_analysis_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scan_ic"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Se procederá a lanzar el análisis Modulo" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/last_analysis_iv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/results_cv_height"
+        android:layout_marginHorizontal="@dimen/margin_basic"
+        android:layout_marginBottom="@dimen/landscape_size_20"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@color/button_grey"
+        app:cardCornerRadius="@dimen/splash_Card_radius"
+        app:layout_constraintBottom_toTopOf="@+id/phone_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_top_small"
+            android:gravity="start|center"
+            android:text="@string/check_last_analysis"
+            android:textColor="@color/text_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_tinny"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginBottom="@dimen/margin_tinny"
+            android:contentDescription="@string/right_arrow_icon_alt"
+            android:src="@drawable/right_arrow_button_ic" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/phone_btn"
+        android:layout_width="@dimen/home_buttons_width"
+        android:layout_height="@dimen/home_buttons_height"
+        android:layout_marginBottom="@dimen/results_cv_margin_h"
+        android:background="@drawable/ic_017"
+        app:cardBackgroundColor="@color/button_grey"
+        app:cardCornerRadius="@dimen/splash_Card_radius"
+        app:layout_constraintBottom_toTopOf="@+id/incibe_btn"
+        app:layout_constraintEnd_toStartOf="@id/whatsapp_btn"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/call_icon_alt"
+            android:padding="@dimen/margin_top_layout_top"
+            android:src="@drawable/ic_017" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/whatsapp_btn"
+        android:layout_width="@dimen/home_buttons_width"
+        android:layout_height="@dimen/home_buttons_height"
+        android:layout_marginBottom="@dimen/results_cv_margin_h"
+        android:background="@drawable/ic_017"
+        app:cardBackgroundColor="@color/button_grey"
+        app:cardCornerRadius="@dimen/splash_Card_radius"
+        app:layout_constraintBottom_toTopOf="@+id/incibe_btn"
+        app:layout_constraintEnd_toStartOf="@id/telegram_btn"
+        app:layout_constraintStart_toEndOf="@id/phone_btn">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/whatsapp_icon_alt"
+            android:padding="@dimen/margin_top_layout_top"
+            android:src="@drawable/ic_whatsapp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/telegram_btn"
+        android:layout_width="@dimen/home_buttons_width"
+        android:layout_height="@dimen/home_buttons_height"
+        android:layout_marginBottom="@dimen/results_cv_margin_h"
+        android:background="@drawable/ic_017"
+        app:cardBackgroundColor="@color/button_grey"
+        app:cardCornerRadius="@dimen/splash_Card_radius"
+        app:layout_constraintBottom_toTopOf="@+id/incibe_btn"
+        app:layout_constraintEnd_toStartOf="@id/notifications_btn"
+        app:layout_constraintStart_toEndOf="@id/whatsapp_btn">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/telegram_icon_alt"
+            android:padding="@dimen/margin_top_layout_top"
+            android:src="@drawable/ic_telegram" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/notifications_btn"
+        android:layout_width="@dimen/home_buttons_width"
+        android:layout_height="@dimen/home_buttons_height"
+        android:layout_marginBottom="@dimen/results_cv_margin_h"
+        android:background="@drawable/ic_017"
+        app:cardBackgroundColor="@color/button_grey"
+        app:cardCornerRadius="@dimen/splash_Card_radius"
+        app:layout_constraintBottom_toTopOf="@+id/incibe_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/telegram_btn">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/notification_icon_alt"
+            android:padding="@dimen/margin_top_layout_top"
+            android:src="@drawable/ic_notification" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/incibe_btn"
+        android:layout_width="@dimen/incibe_splash_width"
+        android:layout_height="@dimen/incibe_splash_height"
+        android:layout_marginBottom="@dimen/results_cv_margin_start"
+        android:contentDescription="@string/logo_incibe_alt"
+        android:src="@drawable/logo_incibe_test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

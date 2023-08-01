@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/llPopupMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/margin_double"
+    android:layout_marginEnd="@dimen/margin_double"
+    android:background="@drawable/shape_rounded_rect"
+    android:focusable="true"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/icon_iv"
+        android:layout_width="@dimen/dialog_icon_size"
+        android:layout_height="@dimen/dialog_icon_size"
+        android:layout_marginTop="@dimen/margin_basic"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:src="@drawable/ic_alert_info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/dialog_icon_alt"/>
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/DialogTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_double"
+        android:layout_marginTop="@dimen/margin_big"
+        android:gravity="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/message_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_iv"
+        tool:text="Title"
+        tool:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/header_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="icon_iv, title_tv" />
+
+    <TextView
+        android:id="@+id/message_tv"
+        android:linksClickable="true"
+        android:autoLink="all"
+        style="@style/DialogSubtitleText"
+        android:layout_width="@dimen/landscape_size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_basic"
+        android:layout_marginEnd="@dimen/margin_basic"
+        android:layout_marginTop="@dimen/margin_double"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_barrier"
+        tool:text="En estos momentos el sistema está recibiendo muchas peticiones. Por favor, inténtelo de nuevo más tarde."
+        tool:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/content_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="title_tv, message_tv" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel_btn"
+        style="@style/PrimaryButton.CancelButton"
+        android:layout_width="@dimen/dialog_button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_double"
+        android:layout_marginTop="@dimen/margin_double"
+        android:layout_marginEnd="@dimen/margin_double"
+        android:layout_marginBottom="@dimen/margin_double"
+        android:text="@string/cancel"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/accept_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content_barrier"
+        tool:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/accept_btn"
+        style="@style/PrimaryButton"
+        android:layout_width="@dimen/dialog_button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_double"
+        android:layout_marginTop="@dimen/margin_double"
+        android:layout_marginEnd="@dimen/margin_double"
+        android:layout_marginBottom="@dimen/margin_double"
+        android:text="@string/accept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancel_btn"
+        app:layout_constraintTop_toBottomOf="@id/content_barrier" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

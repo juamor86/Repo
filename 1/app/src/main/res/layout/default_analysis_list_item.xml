@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvType"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/elevation_small"
+    android:layout_marginEnd="@dimen/elevation_small"
+    android:layout_marginStart="@dimen/elevation_small"
+    android:layout_marginTop="@dimen/margin_left_righ"
+    app:cardCornerRadius="@dimen/corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clType"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sh_analysis_item">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/TitleCardAnalysisText"
+            android:id="@+id/rv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_default_double"
+            app:layout_constraintStart_toEndOf="@+id/radioButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Análisis completo" />
+
+        <TextView
+            style="@style/DescriptionCardAnalysisText"
+            android:id="@+id/rv_subtitle"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_tinny"
+            android:layout_marginBottom="@dimen/margin_default_double"
+            android:layout_marginEnd="@dimen/margin_default_double"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioButton"
+            app:layout_constraintTop_toBottomOf="@+id/rv_title"
+            tools:text="Análisis completo del terminal que buscará problemas de seguridad tanto a nivel de configuración, aplicaciones y de sistema" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

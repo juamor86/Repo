@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_default"
+    app:cardCornerRadius="@dimen/landscape_size_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_double"
+            android:fontFamily="@font/open_sans"
+            android:gravity="end"
+            android:textColor="#1d2124"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12/04/2021" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="@dimen/landscape_size_0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_double"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:textColor="#1d2124"
+            android:textSize="@dimen/text_size_14"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/date_tv"
+            tools:text="Nombre del aviso" />
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_double"
+            android:fontFamily="@font/open_sans"
+            android:textColor="#1d2124"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_tv"
+            tools:text="Breve descripción del aviso. En este caso, es un aviso con importancia alta." />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

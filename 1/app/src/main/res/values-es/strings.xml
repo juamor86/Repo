@@ -1,0 +1,116 @@
+<resources>
+    <string name="version">Versión %1$s</string>
+    <string name="error">Error</string>
+    <string name="terms_and_conditions_tittle">Términos y condiciones</string>
+    <string name="terms_and_conditions_content">Para continuar en la aplicación de CONAN Mobile debes aceptar los <a href="#">términos y condiciones legales.</a></string>
+    <string name="terms_and_conditions_reject">Salir de la app</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="no_internet_tittle">No tienes conexión</string>
+    <string name="no_internet_content">Para poder utilizar CONAN Mobile es necesario que estés conectado a internet. Por favor, comprueba tu conexión e inténtalo de nuevo más tarde.</string>
+    <string name="no_internet_understood">Entendido</string>
+    <string name="settings">Configuración</string>
+    <string name="analysis_type">Análisis disponibles</string>
+    <string name="help">Ayuda</string>
+    <string name="check_last_analysis">Consulta tu último análisis</string>
+    <string name="full_analysis">Análisis completo</string>
+    <string name="application_analysis">Análisis de aplicaciones</string>
+    <string name="analyze_device">Analizar dispositivo</string>
+    <string name="analyzing_device">Analizando dispositivo</string>
+    <string name="default_analysis_title">Elige el análisis con que el que te gustaría comenzar</string>
+    <string name="default_analysis_description">La aplicación se abrirá con el análisis que selecciones como predeterminado</string>
+    <string name="no_configuration_title">Configuración no disponible</string>
+    <string name="no_configuration_text">No hay ninguna configuración disponible en este momento. Por favor, cierre la aplicación.</string>
+    <string name="incidences_detected">Hemos detectado algunas incidencias</string>
+    <string name="apps">Aplicaciones</string>
+    <string name="permissions">Permisos</string>
+    <string name="advices">Consejos</string>
+    <string name="incidences">Incidencias</string>
+    <string name="review">Revisión</string>
+    <string name="critical">Críticas</string>
+    <string name="attention_required">Requiere atención</string>
+    <string name="everything_ok">¡Todo bien por aquí!</string>
+    <string name="device_config">Configuración del dispositivo</string>
+    <string name="analyzed_apps">Apps analizadas:</string>
+    <string name="check_app_permissions">Revisa los permisos de tus apps según:</string>
+    <string name="permission_type">Tipo de permiso</string>
+    <string name="risk_level">Nivel de riesgo</string>
+    <string name="results">Resultados</string>
+    <string name="analysis_launched">Analizando dispositivo...</string>
+    <string name="common_yes">Si</string>
+    <string name="common_not">No</string>
+    <string name="warning_running_analysis_title">Análisis en curso</string>
+    <string name="warning_running_analysis_message">Tienes un análisis ejecutandose ahora, quieres abandonar ese proceso</string>
+    <string name="warning_no_analysis_available_yet_title">Análisis no disponible</string>
+    <string name="warning_no_analysis_available_yet_message">No puede realizar un nuevo análisis hasta dentro de %s</string>
+    <string name="warning_no_analysis_available_yet_message_seconds">No puede realizar un nuevo análisis hasta dentro de algunos segundos</string>
+    <string name="warning_no_analysis_is_running_message">Actualmente existe un análisis en ejecución</string>
+    <string name="warning_permissions_needed_title">Permisos no aceptados</string>
+    <string name="warning_permissions_needed_message">Se necesitan los permisos de llamada para el correcto funcionamiento de la aplicación.</string>
+    <string name="description">Descripción</string>
+    <string name="open_wifis">Redes abiertas:</string>
+    <string name="seconds">segundos</string>
+    <string name="minutes">minutos</string>
+    <string name="gps_disabled_title">GPS deshabilitado</string>
+    <string name="gps_disabled_message">El GPS se encuentra actualmente deshabilitado, algunos análisis no se ejecutarán, ¿Quieres activar la Navegación GPS Ahora?</string>
+    <string name="clase_button_legal">Cerrar</string>
+    <string name="label_apps_not_installed">Aplicación no instalada</string>
+    <string name="analysis_connection_lost_text">Debido a una perdida de conexión no se van a poder finalizar los análisis. Por favor, restablezca la conexion a internet.</string>
+    <string name="analysis_connection_lost_tittle">Conexión perdida</string>
+
+    <!-- DetailFragment -->
+    <string name="label_subtitle_insecue_network">Redes abiertas:</string>
+    <string name="label_subtitle_notification_access">Aplicaciones con acceso a notificaciones:</string>
+    <string name="warnings_error">No se ha podido cargar el listado de avisos. Inténtelo de nuevo más tarde</string>
+    <string name="osi_error">No se ha podido cargar el listado de consejos OSI. Inténtelo de nuevo más tardeOSI tips list could not be loaded. Try again later</string>
+    <string name="warnings">Avisos</string>
+    <string name="importance_high">Importancia alta</string>
+    <string name="importance_medium">Importancia media</string>
+    <string name="importance_low">Importancia baja</string>
+    <string name="origin_not_found">Origen no encontrado</string>
+    <string name="system">Sistema</string>
+    <string name="osi_tips">Consejos OSI</string>
+    <string name="menu">Menú</string>
+    <string name="no_warnings">No hay avisos en este momento.</string>
+    <string name="analysis_message">Se iniciará el análisis &lt;b>%1$s&lt;/b></string>
+    <string name="analysis_not_available">Análisis no disponible</string>
+    <string name="recommended_analysis">Es recomendable que vuelva a realizar un nuevo análisis de su dispositivo.</string>
+    <string name="no_pdf_found_title">Documento no encontrado</string>
+    <string name="no_pdf_found_message">Lo sentimos, no se ha podido abrir el documento de ayuda</string>
+    <string name="finished_analysis_notification_message">El análisis de su dispositivo ha terminado</string>
+    <string name="analysis_title">Análisis</string>
+    <string name="developer_settings_alert">Desactive esta característica en la pantalla de opciones para desarrolladores</string>
+    <string name="settings_alert">Desactive esta característica en la pantalla de ajustes del dispositivo</string>
+    <string name="safetynet_not_enabled">El módulo 104 - Verificación SafetyNet no está activo</string>
+
+    <!-- OsiFragment -->
+    <string name="label_link_osi"><a href="www.osi.es">www.osi.es</a></string>
+    <string name="app_not_into_safetynet">La aplicación no se encuentra en el listado de apps maliciosas de SafetyNet</string>
+    <string name="permissions_subtitle">Esta aplicación ha sido marcada como de riesgo alto debido a que tiene acceso a los siguientes permisos de sistema:</string>
+
+    <!-- Accessibility -->
+    <string name="logo_conan_alt">Logo conan mobile</string>
+    <string name="logo_incibe_alt">Logo incibe</string>
+    <string name="terms_and_conditions_icon_alt">Icono términos y condiciones</string>
+    <string name="internet_icon_alt">Icono internet</string>
+    <string name="right_arrow_icon_alt">Icono flecha derecha</string>
+    <string name="left_arrow_icon_alt">Icono flecha izquierda</string>
+    <string name="advices_icon_alt">Icono consejos</string>
+    <string name="whatsapp_icon_alt">Icono whatsapp</string>
+    <string name="settings_analysis_icon_alt">Icono settings</string>
+    <string name="settings_dot_icon_alt">Icono incidencias en settings</string>
+    <string name="apps_analysis_icon_alt">Icono aplicaciones</string>
+    <string name="apps_dot_icon_alt">Icono incidencias en aplicaciones</string>
+    <string name="permissions_analysis_icon_alt">Icono permisos</string>
+    <string name="permissions_dot_icon_alt">Icono incidencias en permisos</string>
+    <string name="analysis_icon_alt">Icono resultado análisis</string>
+    <string name="analysis_ok_icon_alt">Icono análisis ok</string>
+    <string name="play_analysis_icon_alt">Icono ejecutar análisis</string>
+    <string name="call_icon_alt">Icono llamada al 017</string>
+    <string name="telegram_icon_alt">Icono Telegram</string>
+    <string name="notification_icon_alt">Icono notificaciones</string>
+    <string name="attention_icon_alt">Icono atención</string>
+    <string name="dialog_icon_alt">Icono diálogo</string>
+    <string name="close_icon_alt">Icono cerrar</string>
+
+</resources>

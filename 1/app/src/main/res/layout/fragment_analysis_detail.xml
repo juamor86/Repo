@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin_top_incidences_list_item">
+
+    <LinearLayout
+        android:id="@+id/tittle_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/incidence_icon_iv"
+            android:layout_width="@dimen/incidence_icon"
+            android:layout_height="@dimen/incidence_icon"
+            android:layout_marginStart="@dimen/incidence_detail_margin_horizontal"
+            android:contentDescription="@string/internet_icon_alt"
+            android:src="@drawable/ic_wifi"
+            app:layout_constraintEnd_toStartOf="@id/subtitle_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/incidence_icon"
+            android:layout_marginStart="@dimen/margin_default"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/incidence_icon_iv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Subtitle" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/apps_rv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/landscape_size_0"
+        android:layout_marginHorizontal="@dimen/margin_horizontal_rv"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginBottom="@dimen/margin_big"
+        app:layout_constraintBottom_toTopOf="@+id/configuration_cv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tittle_ll"
+        app:layout_constraintVertical_bias="0.0"
+        tools:itemCount="30" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/configuration_cv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_text_bottom"
+        android:layout_marginHorizontal="@dimen/margin_horizontal_text_bottom"
+        android:layout_marginVertical="@dimen/vertical_margin"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:layout_constraintBottom_toTopOf="@id/advices_cv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/app_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_tv_bottom"
+                android:ellipsize="end"
+                android:gravity="start|center_vertical"
+                android:text="@string/device_config"
+                android:textColor="@color/unselected_button_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/arrow_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_end_text_bottom"
+                android:backgroundTint="@color/color_tint"
+                android:src="@drawable/right_arrow_button_ic"
+                android:tintMode="multiply"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="@string/right_arrow_icon_alt"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/advices_cv"
+        android:layout_width="@dimen/results_cv_advices_width"
+        android:layout_height="@dimen/results_cv_advices_height"
+        android:layout_marginBottom="@dimen/margin_bottom_cardView_bottom"
+        app:cardBackgroundColor="@color/button_grey"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/whatsapp_cv"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/advices_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="@dimen/results_cv_advices_margin_left"
+                android:src="@drawable/ic_advices"
+                app:layout_constraintEnd_toStartOf="@id/advices_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                android:contentDescription="@string/advices_icon_alt">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/advices_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_end_text_cardView_bottom"
+                android:gravity="end|center_vertical"
+                android:text="@string/advices"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/advices_iv">
+
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/whatsapp_cv"
+        android:layout_width="@dimen/results_cv_advices_width"
+        android:layout_height="@dimen/results_cv_advices_height"
+        android:layout_marginBottom="@dimen/margin_bottom_cardView_bottom"
+        app:cardBackgroundColor="@color/button_grey"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/advices_cv">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin_horizontal_cardView_bottom"
+            android:src="@drawable/ic_whatsapp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/whatsapp_icon_alt" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
