@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/default_padding_standard"
+    android:paddingHorizontal="@dimen/default_padding_double">
+
+    <ImageView
+        android:id="@+id/expense_icon_iv"
+        android:layout_width="@dimen/expense_icon_size"
+        android:layout_height="@dimen/expense_icon_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_stadistics"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/expense_name_item_tv"
+        style="@style/BoldText.FocusItemText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_triple"
+        android:layout_marginBottom="@dimen/default_margin_half"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toTopOf="@id/expense_date_item_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/expense_icon_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Arroz con bogabante" />
+
+    <TextView
+        android:id="@+id/expense_date_item_tv"
+        style="@style/RegularText.DateItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_triple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/expense_icon_iv"
+        app:layout_constraintTop_toBottomOf="@+id/expense_name_item_tv"
+        tools:text="4 Mayo 2022" />
+
+    <TextView
+        android:id="@+id/expense_quantity_item_tv"
+        style="@style/BoldText.FocusItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_standard"
+        app:layout_constraintBaseline_toBaselineOf="@+id/expense_date_item_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/expense_date_item_tv"
+        tools:text="-100000€" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
