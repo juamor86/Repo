@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../hcert-kotlin/1.4.0-CUSTOM/hcert-kotlin-1.4.0-CUSTOM.module",
+    "group": "ehn.techiop.hcert",
+    "module": "hcert-kotlin",
+    "version": "1.4.0-CUSTOM",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.8.3",
+      "buildId": "mo3nz5jgxzd4pgmlmtivydlqxm"
+    }
+  },
+  "variants": [
+    {
+      "name": "jsApiElements-published",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "legacy",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-datetime",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-cbor",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.github.aakira",
+          "module": "napier",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.5.20"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-js",
+          "version": {
+            "requires": "1.5.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hcert-kotlin-js-1.4.0-CUSTOM.jar",
+          "url": "hcert-kotlin-js-1.4.0-CUSTOM.jar",
+          "size": 327212,
+          "sha512": "de7239f33db613931a3acd9566f02233829276c9eb3e3be882cf161bc48ea82ed7b24274ee6ef3982fd804a5cea50b082a1b566ff8c40e1753958f8135bf7165",
+          "sha256": "b1a2f25e12cf22f4a73146d0471e6a6fb1bf2c4d735eccaf888d2c96d12dee3e",
+          "sha1": "4b8d479b6d3cb0079a94f56efcff7a7994b630f0",
+          "md5": "646a995f998c3c79760be97816ddbfce"
+        }
+      ]
+    },
+    {
+      "name": "jsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "legacy",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-datetime",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-cbor",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.github.aakira",
+          "module": "napier",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.5.20"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-js",
+          "version": {
+            "requires": "1.5.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hcert-kotlin-js-1.4.0-CUSTOM.jar",
+          "url": "hcert-kotlin-js-1.4.0-CUSTOM.jar",
+          "size": 327212,
+          "sha512": "de7239f33db613931a3acd9566f02233829276c9eb3e3be882cf161bc48ea82ed7b24274ee6ef3982fd804a5cea50b082a1b566ff8c40e1753958f8135bf7165",
+          "sha256": "b1a2f25e12cf22f4a73146d0471e6a6fb1bf2c4d735eccaf888d2c96d12dee3e",
+          "sha1": "4b8d479b6d3cb0079a94f56efcff7a7994b630f0",
+          "md5": "646a995f998c3c79760be97816ddbfce"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../hcert-kotlin/1.4.0-CUSTOM/hcert-kotlin-1.4.0-CUSTOM.module",
+    "group": "ehn.techiop.hcert",
+    "module": "hcert-kotlin",
+    "version": "1.4.0-CUSTOM",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.8.3",
+      "buildId": "mo3nz5jgxzd4pgmlmtivydlqxm"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmDataGenApiElements-published",
+      "attributes": {
+        "ehn.techiop.hcert.faults": "true",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-datetime",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-cbor",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.github.aakira",
+          "module": "napier",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.5.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hcert-kotlin-jvmdatagen-1.4.0-CUSTOM.jar",
+          "url": "hcert-kotlin-jvmdatagen-1.4.0-CUSTOM.jar",
+          "size": 331638,
+          "sha512": "159cb22f51fa0632e8ee0e25cf5ccfeeba858569047190e63b6fbb8a691401205e40244ad05906e912a1694eda33bc65b5de4dc8cbc34ac5e83c207f3d29c4f6",
+          "sha256": "52702a6466c28ddc49df61641f27b4170361d6291b6cdeb906a9526b143dbaa7",
+          "sha1": "7d26be8acddd985f8f671418f34109bc14113065",
+          "md5": "2788bbc56269fea493c0fce11bf08e47"
+        }
+      ]
+    },
+    {
+      "name": "jvmDataGenRuntimeElements-published",
+      "attributes": {
+        "ehn.techiop.hcert.faults": "true",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-datetime",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-cbor",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.github.aakira",
+          "module": "napier",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.5.20"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.5.20"
+          }
+        },
+        {
+          "group": "com.augustcellars.cose",
+          "module": "cose-java",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "com.google.zxing",
+          "module": "core",
+          "version": {
+            "requires": "3.4.1"
+          }
+        },
+        {
+          "group": "com.google.zxing",
+          "module": "javase",
+          "version": {
+            "requires": "3.4.1"
+          }
+        },
+        {
+          "group": "org.bouncycastle",
+          "module": "bcpkix-jdk15to18",
+          "version": {
+            "requires": "1.68"
+          }
+        },
+        {
+          "group": "net.pwall.json",
+          "module": "json-kotlin-schema",
+          "version": {
+            "requires": "0.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.5.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hcert-kotlin-jvmdatagen-1.4.0-CUSTOM.jar",
+          "url": "hcert-kotlin-jvmdatagen-1.4.0-CUSTOM.jar",
+          "size": 331638,
+          "sha512": "159cb22f51fa0632e8ee0e25cf5ccfeeba858569047190e63b6fbb8a691401205e40244ad05906e912a1694eda33bc65b5de4dc8cbc34ac5e83c207f3d29c4f6",
+          "sha256": "52702a6466c28ddc49df61641f27b4170361d6291b6cdeb906a9526b143dbaa7",
+          "sha1": "7d26be8acddd985f8f671418f34109bc14113065",
+          "md5": "2788bbc56269fea493c0fce11bf08e47"
+        }
+      ]
+    }
+  ]
+}
